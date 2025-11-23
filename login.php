@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+$correct_email = "Lotte@SoundStreet.com";
+$correct_password = "12345";
+
+$error = "";
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

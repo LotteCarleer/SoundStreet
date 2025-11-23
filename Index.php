@@ -3,7 +3,7 @@
 
 session_start();
 
-if(!isset($_SESSION["logged_in"])){
+if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
     header("Location: login.php");
     exit;
 }
@@ -21,7 +21,9 @@ if(!isset($_SESSION["logged_in"])){
     <title>Document</title>
 </head>
 <body>
-    <h1>Home</h1>
+    <h1>Welkom bij SoundStreet!</h1>
+
+    <p><a href="logout.php">uitloggen</a></p>
     
 </body>
 </html>

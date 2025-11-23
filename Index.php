@@ -24,6 +24,11 @@ if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
     <h1>Welkom bij SoundStreet!</h1>
 
     <p><a href="logout.php">uitloggen</a></p>
+
+    <h2>Categorieën</h2>
+    <a href="index.php">Alle Producten</a>
+
+    <h2>Producten</h2>
     
 </body>
 </html>

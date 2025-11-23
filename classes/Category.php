@@ -7,9 +7,13 @@ class Category{
     }
 
     public function all(){
-        $stmt = $this->db->query("SSELECT * FROM categories");
+        $stmt = $this->db->query("SELECT * FROM categories");
         return $stmt->fetchAll();
-        
+    }
+
+    public function add($name){
+        $stmt = $this->db->prepare("INSERT INTO categories (name) VALUES (?)");
+        return $stmt->execute([$name]);
     }
 }
 

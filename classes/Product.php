@@ -16,6 +16,14 @@ class Product {
         }
         return $stmt->fetchAll();
     }
+
+    public function add($title, $description, $price, $category_id, $image){
+        $stmt = $this->db->prepare("
+         INSERT INTO products (title, description, price, category_id, image)
+        VALUES (?, ?, ?, ?, ?)
+    ");
+    return $stmt->execute([$title, $description, $price, $category_id, $image]);
+    }
 }
 
 

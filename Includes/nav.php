@@ -1,4 +1,12 @@
-<nav>
+<?php
+
+if (session_status() === PHP_SESSION_NONE){
+    session_start();
+}
+
+?>
+
+<nav style="padding: 10px; background:#eee; margin-bottom:20px;">
 
 <a href="index.php">Home</a>
 <a href="product.php">Products</a>

@@ -23,6 +23,7 @@ if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
     <h1>Welkom bij SoundStreet!</h1>

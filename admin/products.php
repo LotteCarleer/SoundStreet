@@ -9,18 +9,18 @@
     <h2>Categorie toevoegen</h2>
     <form method="POST">
 
-      <input type="text" name="category_name" placeholder="Naam nieuwe categorie">
+      <input type="text" name="category_name" placeholder="Naam nieuwe categorie"><br><br>
       <button name="add_category">Toevoegen</button>
 
     </form>
      <h2>Product toevoegen</h2>
      <form method="POST" enctype="multipart/form-data">
-        <input type="text" name="title" placeholder="Titel">
-        <textarea name="description" placeholder="Beschrijving"></textarea>
-        <input type="number" name="price" placeholder="Prijs" >
+        <input type="text" name="title" placeholder="Titel"><br><br>
+        <textarea name="description" placeholder="Beschrijving"></textarea><br><br>
+        <input type="number" name="price" placeholder="Prijs" ><br><br>
      </form>
 
-    <input type="file" name="image" >
+    <input type="file" name="image" ><br><br>
     <button name="addProduct">Toevoegen</button>
 </body>
 </html>

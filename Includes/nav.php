@@ -6,8 +6,35 @@ if (session_status() === PHP_SESSION_NONE){
 
 ?>
 
-<nav style="padding: 10px; background:#F2E9E1; margin-bottom:20px;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigatie</title>
 
+    <style>
+
+        nav{
+            padding: 10px;
+            background-color: #F2E9E1;
+            margin-bottom: 20px;
+        }
+
+        .links a {
+            font-family: Arial, Helvetica, sans-serif;
+           text-decoration: none;
+           color: black;
+           font-weight: bold;
+           font-size: large;
+        }
+        
+    </style>
+</head>
+<body>
+<nav>
+
+<div class="links">
 <a href="index.php" style="margin-right: 15px;">Home</a>
 <a href="product.php" style="margin-right: 15px;">Products</a>
 
@@ -21,4 +48,7 @@ if (session_status() === PHP_SESSION_NONE){
     <input type="text" name="q" placeholder="Zoek" required>
     <button type="submit">Zoeken</button> 
 </form>
+</div>
 </nav>
+</body>
+</html>

@@ -36,6 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 <body>
     <h2>Inloggen</h2>
 
+    <?php if (!empty($error)) : ?>
+      <p style="color:red;"><?php echo $error; ?></p>
+    <?php endif; ?>
+
     <form method="post" action="">
         <label for="email">Email:</label> <br>
         <input type="email" name="email" required>

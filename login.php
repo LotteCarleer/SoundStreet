@@ -7,6 +7,20 @@ $correct_password = "12345";
 
 $error = "";
 
+if ($_SERVER["REQUEST_METHOD"] === "POST"){
+
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    if ($email === $correct_email && $password === $correct_password){
+        $_SESSION["logged_in"] = true;
+        header("Location: index.php");
+        exit;
+    } else {
+        $error = "Foutieve login.";
+    }
+}
+
 
 ?>
 

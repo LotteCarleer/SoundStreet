@@ -30,6 +30,11 @@ if (isset($_POST['add_product'])){
     $price = $_POST['price'];
     $cat_id = $_POST['category_id'];
 }
+
+$image = "";
+if (!empty($_FILES['image']['name'])){
+ $image = 
+}
 ?>
 
 

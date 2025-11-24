@@ -22,7 +22,7 @@ if (isset($_POST['add_category'])){
     $category->add($name);
 }
 
-if (isset($_POST['add_product'])){
+if (isset($_POST['addProduct'])){
     $title = $_POST['title'];
     $desc = $_POST['description'];
     $price = $_POST['price'];

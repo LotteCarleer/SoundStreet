@@ -15,6 +15,12 @@ class Category{
         $stmt = $this->db->prepare("INSERT INTO categories (name) VALUES (?)");
         return $stmt->execute([$name]);
     }
+
+    public function find($id){
+        $stmt = $this->db->prepare("SELECT * FROM categories WHERE id = ?");
+        $stmt->execute([$id]);
+        return $stmt->fetch();
+    }
 }
 
 

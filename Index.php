@@ -24,6 +24,12 @@ if (isset($_POST['add_category'])){
     $category->add($_POST['category_name']);
 }
 
+if (isset($_POST['add_product'])){
+    $title = $_POST['title'];
+    $desc = $_POST['description'];
+    $price = $_POST['price'];
+    $cat_id = $_POST['category_id'];
+}
 ?>
 
 

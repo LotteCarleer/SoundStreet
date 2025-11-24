@@ -17,7 +17,7 @@ if (session_status() === PHP_SESSION_NONE){
 
         nav{
             padding: 10px;
-            background-color: #F2E9E1;
+            background-color: #BD4A7E;
             margin-bottom: 20px;
         }
 
@@ -44,10 +44,7 @@ if (session_status() === PHP_SESSION_NONE){
 <a href="/admin/products.php">Admin Panel</a>
 <?php endif; ?>
 
-<form action="/search.php" method="GET">
-    <input type="text" name="q" placeholder="Zoek" required>
-    <button type="submit">Zoeken</button> 
-</form>
+
 </div>
 </nav>
 </body>

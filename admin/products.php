@@ -72,17 +72,20 @@ $product->add($title, $desc, $price, $cat_id, $image);
 
         <?php 
         $cats = $category->all();
-        if (!$cats){
-          echo "<p style='color:red;'> Geen categorieën gevonden of database error.</p>";
+        if (empty($cats)){
+          $cats = [];
         }
         
         ?>
 
-        <select name="category_id">
-         <?php foreach ($cats as $cat): ?>
-          <option value="<?= $cat['id'] ?>"><?= $cat['name'] ?></option>
-         <?php endforeach;  ?> 
-
+        <select name="category_id" required>
+         <?php if (!empty($cats)): ?>
+           <?php foreach ($cats as $cat): ?>
+            <option value="<?= $cat['id'] ?>"><?= htmlspecialchars($cat['name']) ?></option>
+           <?php endforeach; ?>
+          <?php else: ?>
+           <option value="">Maak een categorie aan!</option>
+          <?php endif; ?> 
         </select><br>
 
     <input type="file" name="image" ><br><br>

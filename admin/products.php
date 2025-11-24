@@ -2,23 +2,24 @@
 
 session_start();
 
-include 'includes/nav.php';
 
-if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
+
+if(!isset($_SESSION["logged_in"])){
     header("Location: login.php");
     exit;
 }
 
-require 'classes/database.php';
-require 'classes/Category.php';
-require 'classes/Product.php';
+require './classes/database.php';
+require './classes/Category.php';
+require './classes/Product.php';
 
 $db = new Database();
 $category = new Category($db);
 $product = new Product($db);
 
 if (isset($_POST['add_category'])){
-    $category->add($_POST['category_name']);
+    $name = $_POST['category_name'];
+    $category->add($name);
 }
 
 if (isset($_POST['add_product'])){

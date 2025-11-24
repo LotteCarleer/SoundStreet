@@ -5,7 +5,7 @@ session_start();
 
 
 if(!isset($_SESSION["logged_in"])){
-    header("Location: login.php");
+    header("Location: ./login.php");
     exit;
 }
 
@@ -30,9 +30,9 @@ if (isset($_POST['add_product'])){
 
 
 $image = "";
-if (isset($_FILES['image']) && $_FILES['image']['error'] == 0){
- $image = "uploads/products/" . $_FILES['image']['name'];
- move_uploaded_file($_FILES['image']['tmp_name'], "../" . $image);
+if (!empty($_FILES["image"]["name"])){
+  $image = "uploads/products/" . $_FILES["image"]["name"];
+  move_uploaded_file($_FILES["image"]["tmp_name"], "../" . $image);
 }
 
 $product->add($title, $desc, $price, $cat_id, $image);

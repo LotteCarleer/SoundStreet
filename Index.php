@@ -29,12 +29,19 @@ if (isset($_POST['add_product'])){
     $desc = $_POST['description'];
     $price = $_POST['price'];
     $cat_id = $_POST['category_id'];
-}
+
 
 $image = "";
 if (!empty($_FILES['image']['name'])){
- $image = 
+ $image = "uploads/products/" . $_FILES['image']['name'];
+ move_uploaded_file($_FILES['image']['tmp_name'], "../" . $image);
 }
+
+$product->add($title, $desc, $price, $cat_id, $image);
+
+}
+
+
 ?>
 
 

@@ -1,4 +1,6 @@
 <?php
+ini_set("display_errors", 1);
+error_reporting(E_ALL);
 
 session_start();
 
@@ -68,8 +70,16 @@ $product->add($title, $desc, $price, $cat_id, $image);
         <textarea name="description" placeholder="Beschrijving"></textarea><br><br>
         <input type="number" name="price" placeholder="Prijs" ><br><br>
 
+        <?php 
+        $cats = $category->all();
+        if (!$cats){
+          echo "<p style='color:red;'> Geen categorieën gevonden of database error.</p>";
+        }
+        
+        ?>
+
         <select name="category_id">
-         <?php foreach ($category->all() as $cat): ?>
+         <?php foreach ($cats as $cat): ?>
           <option value="<?= $cat['id'] ?>"><?= $cat['name'] ?></option>
          <?php endforeach;  ?> 
 

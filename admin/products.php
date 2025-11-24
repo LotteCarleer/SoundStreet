@@ -67,9 +67,16 @@ $product->add($title, $desc, $price, $cat_id, $image);
         <input type="text" name="title" placeholder="Titel"><br><br>
         <textarea name="description" placeholder="Beschrijving"></textarea><br><br>
         <input type="number" name="price" placeholder="Prijs" ><br><br>
-     </form>
+
+        <select name="category_id">
+         <?php foreach ($category->all() as $cat): ?>
+          <option value="<?= $cat['id'] ?>"><?= $cat['name'] ?></option>
+         <?php endforeach;  ?> 
+
+        </select><br>
 
     <input type="file" name="image" ><br><br>
     <button name="addProduct">Toevoegen</button>
+     </form>
 </body>
 </html>

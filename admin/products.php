@@ -9,9 +9,9 @@ if(!isset($_SESSION["logged_in"])){
     exit;
 }
 
-require './classes/database.php';
-require './classes/Category.php';
-require './classes/Product.php';
+require __DIR__ . '/../classes/database.php';
+require __DIR__ . '/../classes/Category.php';
+require __DIR__ . '/../classes/Product.php';
 
 $db = new Database();
 $category = new Category($db);

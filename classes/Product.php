@@ -25,11 +25,7 @@ class Product {
     return $stmt->execute([$title, $description, $price, $category_id, $image]);
     }
 
-    public function find($id){
-        $stmt = $this->db->prepare("SELECT * FROM products WHERE id = ?");
-        $stmt->execute([$id]);
-        return $stmt->fetch();
-    }
+    
 }
 
 

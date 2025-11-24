@@ -10,6 +10,18 @@ if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
     exit;
 }
 
+require 'classes/database.php';
+require 'classes/Category.php';
+require 'classes/Product.php';
+
+$db = new Database();
+$category = new Category($db);
+$product = new Product($db);
+
+$filter = $_GET['category_id'] ?? null;
+$products = $product->all($filter);
+$categories = $category->all();
+
 
 ?>
 

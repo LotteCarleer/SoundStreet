@@ -22,7 +22,7 @@ if (isset($_POST['add_category'])){
     $category->add($name);
 }
 
-if (isset($_POST['addProduct'])){
+if (isset($_POST['add_product'])){
     $title = $_POST['title'];
     $desc = $_POST['description'];
     $price = $_POST['price'];
@@ -76,7 +76,7 @@ $product->add($title, $desc, $price, $cat_id, $image);
         </select><br>
 
     <input type="file" name="image" ><br><br>
-    <button name="addProduct">Toevoegen</button>
+    <button name="add_product">Toevoegen</button>
      </form>
 </body>
 </html>

@@ -72,11 +72,19 @@ $categories = $category->all();
 <body>
 
 <p><a href="logout.php">uitloggen</a></p>
+
     <div class="intro">
+
+    <div class="text">
     <h1>Welkom bij SoundStreet!</h1>
     <p>Bij SoundStreet vind je alles voor de echte muziekliefhebber: van vinyl LP’s en cd’s tot toffe merchandise en hoogwaardige platenspelers. Ontdek nieuwe artiesten, herontdek klassiekers en geef je muziekcollectie een upgrade.</p>
     <a href="product.php">Alle Producten</a>
-    <img src="" alt="">
+    </div>
+
+    <div class="image" >
+    <img src="/Images_index/cassette 2.png" alt="MuziekShop">
+    </div>
+
     </div>
 
     

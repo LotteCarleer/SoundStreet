@@ -85,6 +85,16 @@ $categories = $category->all();
        .text{
         margin-left: 40px;
        } 
+
+       @media (max-width: 768px) {
+        .intro{
+            flex-direction: column;
+            text-align: center;
+
+        }
+
+        
+       }
         
     </style>
 </head>

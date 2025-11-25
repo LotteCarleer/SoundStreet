@@ -43,10 +43,6 @@ $categories = $category->all();
             
         }
       
-        .intro h1{
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            
-        }
  
         .intro{
             

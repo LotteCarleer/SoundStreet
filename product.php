@@ -1,11 +1,10 @@
 <?php
+
 session_start();
 
 include 'includes/nav.php';
 
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

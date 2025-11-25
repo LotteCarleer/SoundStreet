@@ -10,9 +10,9 @@ if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
     exit;
 }
 
-include_once(__DIR__ . '/../classes/database.php');
-include_once(__DIR__ . '/../classes/Category.php');
-include_once(__DIR__ . '/../classes/Product.php');
+include_once(__DIR__ . '/classes/database.php');
+include_once(__DIR__ . '/classes/Category.php');
+include_once(__DIR__ . '/classes/Product.php');
 
 $db = new Database();
 $category = new Category($db);

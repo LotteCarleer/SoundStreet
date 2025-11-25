@@ -15,25 +15,39 @@ if (session_status() === PHP_SESSION_NONE){
 
     <style>
 
-        nav{
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            
             padding: 10px;
-            background-color: #BD4A7E;
+            background-color: #D1C2A7;
             margin-bottom: 20px;
+
         }
 
         .links a {
             font-family: Arial, Helvetica, sans-serif;
            text-decoration: none;
            color: black;
-           font-weight: bold;
+           font-weight: normal;
            font-size: large;
+           padding-right: 3Opx;
         }
         
+        .logo{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 18px;
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
-<nav>
-
+<nav class="nav">
+<div class="logo">
+<h2>SoundStreet</h2>
+</div>
 <div class="links">
 <a href="index.php" style="margin-right: 15px;">Home</a>
 <a href="product.php" style="margin-right: 15px;">Products</a>

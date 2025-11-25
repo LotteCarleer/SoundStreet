@@ -45,27 +45,42 @@ $categories = $category->all();
       
  
         .intro{
-            
-            background-color: #D19FB5;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background-color: #B2AB9F;
             padding: 10px;
             padding-left: 20px;
             padding-bottom: 20px;
+            margin-left: 50px;
+            margin-right: 50px;
+            border-radius: 20px;
+
         }
 
         .intro a{
             text-decoration: none;
             color: black;
-            background-color: white;
+            background-color: #FAFAF9;
             padding: 10px;
             border-radius: 10px;
             font-weight: bolder;
             
+            
         }
 
         .intro p{
-            margin-bottom: 40px;
-            font-size: large;
+            
+            font-size: 20px;
         }
+
+        .image{
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-left: 300px;
+        }
+
+        
         
     </style>
 </head>
@@ -77,12 +92,12 @@ $categories = $category->all();
 
     <div class="text">
     <h1>Welkom bij SoundStreet!</h1>
-    <p>Bij SoundStreet vind je alles voor de echte muziekliefhebber: van vinyl LP’s en cd’s tot toffe merchandise en hoogwaardige platenspelers. Ontdek nieuwe artiesten, herontdek klassiekers en geef je muziekcollectie een upgrade.</p>
+    <p>Bij SoundStreet vind je alles voor de echte muziekliefhebber: van vinyl LP’s en cd’s tot toffe merchandise en hoogwaardige platenspelers. Duik in een wereld van muziek, ontdek nieuwe artiesten, herontdek tijdloze klassiekers en geef je collectie een welverdiende upgrade. Of je nu op zoek bent naar dat zeldzame album, een unieke gadget of gewoon inspiratie voor je volgende luisterervaring, bij SoundStreet vind je altijd iets dat je hart sneller laat kloppen. Laat je meeslepen door de passie voor muziek en maak van elke luisterbeurt een belevenis.</p>
     <a href="product.php">Alle Producten</a>
     </div>
 
     <div class="image" >
-    <img src="/Images_index/cassette 2.png" alt="MuziekShop">
+    <img src="Images_index/MusicShop.png" alt="MuziekShop">
     </div>
 
     </div>

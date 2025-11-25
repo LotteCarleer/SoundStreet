@@ -11,9 +11,9 @@ if(!isset($_SESSION["logged_in"])){
     exit;
 }
 
-require __DIR__ . '/../classes/database.php';
-require __DIR__ . '/../classes/Category.php';
-require __DIR__ . '/../classes/Product.php';
+include_once(__DIR__ . '/../classes/database.php');
+include_once(__DIR__ . '/../classes/Category.php');
+include_once(__DIR__ . '/../classes/Product.php');
 
 $db = new Database();
 $category = new Category($db);

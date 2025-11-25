@@ -51,7 +51,7 @@ $categories = $category->all();
             background-color: #B2AB9F;
             padding: 10px;
             padding-left: 20px;
-            padding-bottom: 20px;
+            padding-bottom: 30px;
             margin-left: 50px;
             margin-right: 50px;
             border-radius: 20px;
@@ -65,6 +65,7 @@ $categories = $category->all();
             padding: 10px;
             border-radius: 10px;
             font-weight: bolder;
+           
             
             
         }
@@ -72,15 +73,18 @@ $categories = $category->all();
         .intro p{
             
             font-size: 20px;
+            margin-bottom: 30px;
         }
 
         .image{
             padding-top: 15px;
-            padding-right: 15px;
+            padding-right: 40px;
             padding-left: 300px;
         }
-
-        
+       
+       .text{
+        margin-left: 40px;
+       } 
         
     </style>
 </head>

@@ -47,7 +47,7 @@ $categories = $category->all();
         .intro{
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 200px;
             background-color: #B2AB9F;
             padding: 10px;
             padding-left: 20px;
@@ -55,6 +55,7 @@ $categories = $category->all();
             margin-left: 50px;
             margin-right: 50px;
             border-radius: 20px;
+            
 
         }
 
@@ -79,7 +80,7 @@ $categories = $category->all();
         .image{
             padding-top: 15px;
             padding-right: 40px;
-            padding-left: 300px;
+            padding-left: 0px;
         }
        
        .text{
@@ -89,11 +90,19 @@ $categories = $category->all();
        @media (max-width: 768px) {
         .intro{
             flex-direction: column;
-            text-align: center;
+            text-align:left;
+            gap: 40px;
 
         }
-
         
+        .image{
+            padding-left: 30px;
+        }
+        
+        .text{
+            margin-left: 20px;
+            margin-right: 30px;
+        }
        }
         
     </style>
@@ -118,7 +127,7 @@ $categories = $category->all();
 
     
 
-    <h2>Categorieën</h2>
+    <h2>Uitgelichte Categorieën</h2>
     <?php foreach ($products as $p): ?>
         <div>
          <h3><?= $p["title"] ?></h3>

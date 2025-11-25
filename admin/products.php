@@ -30,14 +30,26 @@ if (isset($_POST['add_product'])){
     $price = $_POST['price'];
     $cat_id = $_POST['category_id'];
 
-
-$image = "";
+    if ($title == ""){
+      $error = "Titel mag niet leeg zijn.";
+    } elseif ($desc == ""){
+      $error = "Beschrijving mag niet leeg zijn.";
+    } elseif ($price == "" || $price <= 0){
+      $error = "Prijs moet een positief getal zijn.";
+    } elseif ($cat_id == ""){
+      $error = "Je moet een categorie kiezen.";
+    } else{
+     
+      $image = "";
 if (!empty($_FILES["image"]["name"])){
   $image = "uploads/products/" . $_FILES["image"]["name"];
   move_uploaded_file($_FILES["image"]["tmp_name"], "../" . $image);
 }
 
 $product->add($title, $desc, $price, $cat_id, $image);
+$error = "Product toegevoegd!";
+
+    }
 
 }
 
@@ -57,6 +69,11 @@ $product->add($title, $desc, $price, $cat_id, $image);
     </style>
 </head>
 <body>
+
+<?php if (!empty($error)): ?>
+  <p style="color:red;" ><?= $error ?></p>
+ <?php endif; ?> 
+
     <h2>Categorie toevoegen</h2>
     <form method="POST">
 

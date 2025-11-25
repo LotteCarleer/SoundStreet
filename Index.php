@@ -128,19 +128,7 @@ $categories = $category->all();
     
 
     <h2>Uitgelichte Categorieën</h2>
-    <?php foreach ($products as $p): ?>
-        <div>
-         <h3><?= $p["title"] ?></h3>
-         <p><?= $p["description"] ?></p>
-         <p>Prijs: <?= $p["price"] ?> units</p>
-         <?php if ($p["image"]): ?>
-            <img src="<?= $p ["image"] ?>" width="120" >
-          <?php  endif; ?>  
-
-    
-        </div>
-
-    <?php endforeach; ?>    
+     
       <div>
         <h3>
             Vinyls

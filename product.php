@@ -49,7 +49,7 @@ $categories = $category->all();
     <a href="product.php">Alle producten</a>
 
    <?php  foreach($categories as $cat): ?> 
-    <a href="product.php . category_id=<?= $cat['id'] ?>">
+    <a href="product.php?category_id=<?= $cat['id'] ?>">
       <?= htmlspecialchars($cat['name']) ?>
     </a>
 

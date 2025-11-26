@@ -45,6 +45,10 @@ $categories = $category->all();
         
        }
 
+       section{
+        margin-left: 30px;
+       }
+
        .products{
         
         border: solid 3px;
@@ -60,20 +64,36 @@ $categories = $category->all();
       .products img{
         width: 200px;
         border-radius: 10px;
+        display: block;
         margin: 20px 0;
+        
+      }
+
+      .categorieën{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
       }
 
       .categorieën a{
         margin-right: 10px;
         text-decoration: none;
         color: black;
+        font-weight: bold;
 
+      }
+
+      .categorieën a:hover{
+        color: black;
+        
       }
 
     </style>
     
 </head>
 <body>
+  <section>
   <h1>Producten</h1>  
 
   <h2>Categorieën</h2>
@@ -110,6 +130,6 @@ $categories = $category->all();
 
     
    <?php endforeach; ?>
-
+  </section>
 </body>
 </html>

@@ -24,6 +24,7 @@ if (session_status() === PHP_SESSION_NONE){
             padding: 10px;
             background-color: #D1C2A7;
             margin-bottom: 20px;
+            padding: 20px;
 
         }
 
@@ -36,11 +37,12 @@ if (session_status() === PHP_SESSION_NONE){
            padding-right: 3Opx;
         }
         
-        .logo{
+        .logo a{
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            font-size: 18px;
+            font-size: 24px;
             margin-left: 20px;
-            
+            text-decoration: none;
+            color: black;
         }
     </style>
 </head>

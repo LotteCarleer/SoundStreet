@@ -4,6 +4,12 @@ session_start();
 
 include 'includes/nav.php';
 
+if (!isset($_SESSION["logged_in"])){
+  header("Location: login.php");
+  exit;
+}
+
+
 ?>
 
 <!DOCTYPE html>

@@ -17,6 +17,7 @@ $db = new Database();
 $category = new Category($db);
 $product = new Product($db);
 
+
 ?>
 
 <!DOCTYPE html>
@@ -26,8 +27,19 @@ $product = new Product($db);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producten</title>
     <link rel="stylesheet" href="css/normalize.css">
+
+    
 </head>
 <body>
   <h1>Producten</h1>  
+
+  <h2>Categorieën</h2>
+  <div>
+    <a href="product.php">Alle producten</a>
+  </div>
+
+  <h2>Resultaten</h2>
+
+  
 </body>
 </html>

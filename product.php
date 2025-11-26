@@ -17,6 +17,16 @@ $db = new Database();
 $category = new Category($db);
 $product = new Product($db);
 
+if(isset($_GET['category_id'])){
+  $filter = $_GET['category_id'];
+} else {
+  $filter = null;
+}
+
+$products = $product->all($filter);
+
+$categories = $category->all();
+
 
 ?>
 
@@ -40,6 +50,6 @@ $product = new Product($db);
 
   <h2>Resultaten</h2>
 
-  
+
 </body>
 </html>

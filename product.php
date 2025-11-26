@@ -69,6 +69,10 @@ $categories = $category->all();
       <p><?= htmlspecialchars($p["description"]) ?></p>
       <p><p>Prijs:</p><?= $p["price"] ?> SoundCoins</p>
 
+      <?php if (!empty($p["image"])): ?>
+        <img src="<?= $p["image"] ?>" alt="Product image">
+       <?php endif; ?> 
+
 
     </div>
 

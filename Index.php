@@ -39,7 +39,10 @@ $categories = $category->all();
     <style>
 
         body{
+            display: flex;
+            flex-direction: column;
             font-family:Arial, Helvetica, sans-serif;
+            
             
         }
       
@@ -86,6 +89,23 @@ $categories = $category->all();
        .text{
         margin-left: 40px;
        } 
+       
+
+
+       .footer{
+        
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #B2AB9F;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+       }
+       
+        
+
+    
 
        @media (max-width: 768px) {
         .intro{
@@ -105,12 +125,12 @@ $categories = $category->all();
         }
        }
         
-       footer {
-        background-color: #;
-       }
+       
     </style>
 </head>
 <body>
+
+
 
 <p><a href="logout.php">uitloggen</a></p>
 
@@ -135,9 +155,8 @@ $categories = $category->all();
       
  
 
-    <footer>
-
-    <p>&copy; 2025 SoundStreet. Alle rechten voorbehouden.</p>
+    <footer class="footer">
+     <p>&copy; 2025 SoundStreet. Alle rechten voorbehouden.</p>
     </footer>
 
     

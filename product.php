@@ -44,6 +44,22 @@ $categories = $category->all();
         font-family: Arial, Helvetica, sans-serif;
        }
 
+       .products{
+        
+        border: solid 3px;
+        border-radius: 10px;
+        border-color: #9A8570;
+        padding: 20px;
+        margin: 30px 0;
+        max-width: 400px;
+        
+       }
+       
+      .products img{
+        width: 200px;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
 
     </style>
     

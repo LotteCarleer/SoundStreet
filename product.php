@@ -38,13 +38,21 @@ $categories = $category->all();
     <title>Producten</title>
     <link rel="stylesheet" href="css/normalize.css">
 
+    <style>
+       
+       body{
+        font-family: Arial, Helvetica, sans-serif;
+       }
+
+
+    </style>
     
 </head>
 <body>
   <h1>Producten</h1>  
 
   <h2>Categorieën</h2>
-  <div>
+  <div class="categorieën">
 
     <a href="product.php">Alle producten</a>
 
@@ -64,7 +72,7 @@ $categories = $category->all();
 
    <?php foreach($products as $p): ?>
 
-    <div>
+    <div class="products">
       <h3><?= htmlspecialchars($p["title"]) ?></h3>
       <p><?= htmlspecialchars($p["description"]) ?></p>
       <p><p>Prijs:</p><?= $p["price"] ?> SoundCoins</p>

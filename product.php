@@ -145,5 +145,6 @@ $categories = $category->all();
    <?php endforeach; ?>
    </div>
   </section>
+  <?php include 'includes/footer.php'; ?>
 </body>
 </html>

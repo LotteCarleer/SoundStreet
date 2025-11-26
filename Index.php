@@ -103,7 +103,7 @@ $categories = $category->all();
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: #B2AB9F;
+        background-color: #D1C2A7;
         text-align: center;
         font-size: 16px;
         font-weight: bold;

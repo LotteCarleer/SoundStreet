@@ -42,8 +42,14 @@ $categories = $category->all();
             display: flex;
             flex-direction: column;
             font-family:Arial, Helvetica, sans-serif;
+            height: 100%;
+            min-height: 100vh;
             
             
+        }
+
+        main{
+            flex: 1;
         }
       
  
@@ -93,7 +99,7 @@ $categories = $category->all();
 
 
        .footer{
-        
+        margin-top: auto;
         left: 0;
         bottom: 0;
         width: 100%;
@@ -131,7 +137,7 @@ $categories = $category->all();
 <body>
 
 
-
+ <main>
 <p><a href="logout.php">uitloggen</a></p>
 
     <div class="intro">
@@ -151,7 +157,7 @@ $categories = $category->all();
     
 
     <h2>Nieuwe producten</h2>
-     
+ </main>
       
  
 

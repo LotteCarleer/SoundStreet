@@ -5,6 +5,7 @@ session_start();
 
 include 'includes/nav.php';
 
+
 if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true){
     header("Location: login.php");
     exit;
@@ -98,16 +99,7 @@ $categories = $category->all();
        
 
 
-       .footer{
-        margin-top: auto;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #D1C2A7;
-        text-align: center;
-        font-size: 16px;
-        font-weight: bold;
-       }
+      
        
         
 
@@ -161,9 +153,7 @@ $categories = $category->all();
       
  
 
-    <footer class="footer">
-     <p>&copy; 2025 SoundStreet. Alle rechten voorbehouden.</p>
-    </footer>
+    
 
     
 </body>

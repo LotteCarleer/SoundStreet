@@ -58,6 +58,10 @@ $categories = $category->all();
 
   <h2>Resultaten</h2>
 
+  <?php if(empty($products)): ?>
+    <p>Geen producten gevonden in deze categorie!</p>
+   <?php endif; ?> 
+
 
 </body>
 </html>

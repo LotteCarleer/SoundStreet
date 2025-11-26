@@ -42,6 +42,7 @@ $categories = $category->all();
        
        body{
         font-family: Arial, Helvetica, sans-serif;
+        
        }
 
        .products{
@@ -53,12 +54,20 @@ $categories = $category->all();
         margin: 30px 0;
         max-width: 400px;
         
+        
        }
        
       .products img{
         width: 200px;
         border-radius: 10px;
         margin: 20px 0;
+      }
+
+      .categorieën a{
+        margin-right: 10px;
+        text-decoration: none;
+        color: black;
+
       }
 
     </style>

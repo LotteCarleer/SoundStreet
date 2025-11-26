@@ -105,6 +105,9 @@ $categories = $category->all();
         }
        }
         
+       footer {
+        background-color: #;
+       }
     </style>
 </head>
 <body>
@@ -127,19 +130,14 @@ $categories = $category->all();
 
     
 
-    <h2>Uitgelichte Categorieën</h2>
+    <h2>Nieuwe producten</h2>
      
-      <div>
-        <h3>
-            Vinyls
-
-        </h3>
-
-      </div>
+      
  
+
     <footer>
 
-    <p>SoundStreet</p>
+    <p>&copy; 2025 SoundStreet. Alle rechten voorbehouden.</p>
     </footer>
 
     

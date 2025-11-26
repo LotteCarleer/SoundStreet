@@ -13,6 +13,10 @@ include_once(__DIR__ . '/classes/database.php');
 include_once(__DIR__ . '/classes/Category.php');
 include_once(__DIR__ . '/classes/Product.php');
 
+$db = new Database();
+$category = new Category($db);
+$product = new Product($db);
+
 ?>
 
 <!DOCTYPE html>

@@ -49,6 +49,14 @@ $categories = $category->all();
         margin-left: 30px;
        }
 
+       .products-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+        margin-right: 40px;
+       }
+
        .products{
         
         border: solid 3px;
@@ -56,7 +64,7 @@ $categories = $category->all();
         border-color: #9A8570;
         padding: 20px;
         margin: 30px 0;
-        max-width: 400px;
+        text-align: center;
         
         
        }
@@ -64,8 +72,7 @@ $categories = $category->all();
       .products img{
         width: 200px;
         border-radius: 10px;
-        display: block;
-        margin: 20px 0;
+        margin: 20px auto;
         
       }
 
@@ -114,7 +121,8 @@ $categories = $category->all();
   <?php if(empty($products)): ?>
     <p>Geen producten gevonden in deze categorie!</p>
    <?php endif; ?> 
-
+   
+   <div class="products-grid" >
    <?php foreach($products as $p): ?>
 
     <div class="products">
@@ -130,6 +138,7 @@ $categories = $category->all();
 
     
    <?php endforeach; ?>
+   </div>
   </section>
 </body>
 </html>

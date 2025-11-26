@@ -84,15 +84,20 @@ $categories = $category->all();
       }
 
       .categorieën a{
-        margin-right: 10px;
+        
         text-decoration: none;
         color: black;
         font-weight: bold;
+        border-radius: 5px;
+        background-color: #B2AB9F;
+        padding: 10px;
+
 
       }
 
       .categorieën a:hover{
-        color: black;
+        
+        text-decoration: underline;
         
       }
 

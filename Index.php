@@ -154,6 +154,7 @@ $categories = $category->all();
  
 
     
+ <?php include 'includes/footer.php'; ?>
 
     
 </body>

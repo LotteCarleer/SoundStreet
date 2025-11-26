@@ -45,7 +45,15 @@ $categories = $category->all();
 
   <h2>Categorieën</h2>
   <div>
+
     <a href="product.php">Alle producten</a>
+
+   <?php  foreach($categories as $cat): ?> 
+    <a href="product.php . category_id=<?= $cat['id'] ?>">
+      <?= htmlspecialchars($cat['name']) ?>
+    </a>
+
+    <?php endforeach; ?>
   </div>
 
   <h2>Resultaten</h2>

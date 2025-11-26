@@ -97,10 +97,7 @@ $categories = $category->all();
         <img src="<?= $p["image"] ?>" alt="Product image">
        <?php endif; ?> 
 
-     <p> <p>Categorie ID:</p> <?= $p["category_id"] ?></p>
-
-
-    </div>
+      </div>
 
     
    <?php endforeach; ?>

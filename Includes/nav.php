@@ -40,13 +40,14 @@ if (session_status() === PHP_SESSION_NONE){
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: 18px;
             margin-left: 20px;
+            
         }
     </style>
 </head>
 <body>
 <nav class="nav">
 <div class="logo">
-<h2>SoundStreet</h2>
+<a href="index.php">SoundStreet</a>
 </div>
 <div class="links">
 <a href="index.php" style="margin-right: 15px;">Home</a>

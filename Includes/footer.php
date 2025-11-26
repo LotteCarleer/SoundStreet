@@ -10,6 +10,11 @@
 
     <style>
 
+        html, body{
+            height: 100%;
+            margin: 0;
+        }
+
         body{
             display: flex;
             flex-direction: column;

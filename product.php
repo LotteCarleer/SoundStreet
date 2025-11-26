@@ -62,6 +62,18 @@ $categories = $category->all();
     <p>Geen producten gevonden in deze categorie!</p>
    <?php endif; ?> 
 
+   <?php foreach($products as $p): ?>
+
+    <div>
+      <h3><?= htmlspecialchars($p["title"]) ?></h3>
+      <p><?= htmlspecialchars($p["description"]) ?></p>
+      <p><p>Prijs:</p><?= $p["price"] ?> SoundCoins</p>
+
+
+    </div>
+
+    
+   <?php endforeach; ?>
 
 </body>
 </html>

@@ -109,8 +109,12 @@ $categories = $category->all();
 
       .cat-block {
     position: relative;  
-    
-}
+    }
+
+    .cat-block img{
+        border: 4px solid #9A8570;
+        border-radius: 25px;
+    }
 
 
       .cat-block:hover img{
@@ -199,8 +203,8 @@ $categories = $category->all();
             $image = "Images_index/vinyls.png";
         }
 
-        if($cat['name'] == "Cassettes en CD's"){
-            $image = "Images_index/cassettes_cds.png";
+        if($cat['name'] == "CD's"){
+            $image = "Images_index/cd.png";
         }
 
         if($cat['name'] == "Platenspelers en CD spelers"){

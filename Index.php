@@ -151,12 +151,14 @@ $categories = $category->all();
     <h2>Categorieën</h2>
     <div class="categorieën">
 
+       <?php  foreach($categories as $cat): ?> 
+        
+        
 
 
-<?php  foreach($categories as $cat): ?> 
-<a href="product.php?category_id=<?= $cat['id'] ?>">
-  <?= htmlspecialchars($cat['name']) ?>
-</a>
+       <a href="product.php?category_id=<?= $cat['id'] ?>">
+       <?= htmlspecialchars($cat['name']) ?>
+       </a>
 
 <?php endforeach; ?>
 </div>

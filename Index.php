@@ -49,9 +49,7 @@ $categories = $category->all();
             
         }
 
-        main{
-            flex: 1;
-        }
+        
       
  
         .intro{
@@ -91,6 +89,7 @@ $categories = $category->all();
             padding-top: 15px;
             padding-right: 40px;
             padding-left: 0px;
+            
         }
        
        .text{
@@ -115,6 +114,7 @@ $categories = $category->all();
         
         .image{
             padding-left: 30px;
+            
         }
         
         .text{
@@ -129,7 +129,7 @@ $categories = $category->all();
 <body>
 
 
- <main>
+ 
 <p><a href="logout.php">uitloggen</a></p>
 
     <div class="intro">
@@ -149,7 +149,8 @@ $categories = $category->all();
     
 
     <h2>Nieuwe producten</h2>
- </main>
+
+ 
       
  
 

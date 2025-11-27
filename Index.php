@@ -98,8 +98,46 @@ $categories = $category->all();
        
 
 
-      
+      .categorieën{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        gap: 100px;
        
+      }
+
+      .cat-block {
+    position: relative;  
+    
+}
+
+
+      .cat-block:hover img{
+        filter: brightness(50%);
+        
+       
+      }
+
+      .cat-block:hover .cat-naam{
+        opacity: 1;
+      }
+       
+      .cat-naam {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+   
+        
+
+      }
         
 
     
@@ -122,6 +160,8 @@ $categories = $category->all();
             margin-right: 30px;
         }
        }
+
+       
         
        
     </style>
@@ -179,9 +219,9 @@ $categories = $category->all();
         
 
 
-       <a href="product.php?category_id=<?= $cat['id'] ?>">
+       <a href="product.php?category_id=<?= $cat['id'] ?>" class="cat-block">
        <img src="<?= $image ?>" alt="<?= $cat['name'] ?>">
-       <p><?= $cat['name'] ?></p>
+       <p class="cat-naam" ><?= $cat['name'] ?></p>
        </a>
 
 <?php endforeach; ?>

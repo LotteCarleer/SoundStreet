@@ -157,7 +157,8 @@ $categories = $category->all();
 
 
        <a href="product.php?category_id=<?= $cat['id'] ?>">
-       <?= htmlspecialchars($cat['name']) ?>
+       <img src="<?= $image ?>" alt="<?= $cat['name'] ?>">
+       <p><?= $cat['name'] ?></p>
        </a>
 
 <?php endforeach; ?>

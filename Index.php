@@ -152,6 +152,29 @@ $categories = $category->all();
     <div class="categorieën">
 
        <?php  foreach($categories as $cat): ?> 
+
+        <?php 
+
+        if($cat['name'] == "Vinyl's"){
+            $image = "Images_index/vinyls.png";
+        }
+
+        if($cat['name'] == "Cassettes en CD's"){
+            $image = "Images_index/cassettes_cds.png";
+        }
+
+        if($cat['name'] == "Platenspelers en CD spelers"){
+            $image = "Images_index/platenspelers_cdspelers.png";
+        }
+
+        if($cat['name'] == "Merchandise"){
+            $image = "Images_index/merchandise.png";
+        }
+
+        
+            
+            
+        ?>
         
         
 

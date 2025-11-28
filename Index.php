@@ -96,6 +96,11 @@ $categories = $category->all();
         margin-left: 40px;
        } 
        
+       .cat-heading{
+
+        margin-left: 20px;
+        margin-top: 40px;
+       }
 
 
       .categorieën{
@@ -192,7 +197,7 @@ $categories = $category->all();
 
     
 
-    <h2>Categorieën</h2>
+    <h2 class="cat-heading">Categorieën</h2>
     <div class="categorieën">
 
        <?php  foreach($categories as $cat): ?> 

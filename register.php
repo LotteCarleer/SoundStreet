@@ -10,9 +10,9 @@
 <h2>Registreren</h2>
 
 <form method="POST">
-    <input type="text" name="username" placeholder="Gebruikersnaam">
-    <input type="email" name="email" placeholder="Email" >
-    <input type="password" name="password" placeholder="Wachtwoord">
+    <input type="text" name="username" placeholder="Gebruikersnaam"><br>
+    <input type="email" name="email" placeholder="Email" ><br>
+    <input type="password" name="password" placeholder="Wachtwoord"><br>
     <button type="submit">Registreren</button>
 </form>
 

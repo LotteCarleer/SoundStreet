@@ -49,6 +49,16 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
 <h2>Registreren</h2>
 
+<?php if ($error != ""): ?>
+    <p><?= $error ?></p>
+<?php endif; ?>    
+
+<?php if ($success != ""): ?>
+    <p><?= $succes ?></p>
+<?php endif; ?>    
+
+
+
 <form method="POST">
     <input type="text" name="username" placeholder="Gebruikersnaam"><br>
     <input type="email" name="email" placeholder="Email" ><br>

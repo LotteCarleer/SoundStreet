@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+include_once(__DIR__ . "/classes/database.php");
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

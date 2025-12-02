@@ -3,6 +3,12 @@
 session_start();
 include_once(__DIR__ . "/classes/database.php");
 
+$db = new Database();
+$error = "";
+$succes = "";
+
+
+
 
 ?>
 <!DOCTYPE html>

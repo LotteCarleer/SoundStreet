@@ -50,11 +50,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 <h2>Registreren</h2>
 
 <?php if ($error != ""): ?>
-    <p><?= $error ?></p>
+    <p style="color:red;" ><?= $error ?></p>
 <?php endif; ?>    
 
 <?php if ($success != ""): ?>
-    <p><?= $succes ?></p>
+    <p style="color:green;" ><?= $succes ?></p>
 <?php endif; ?>    
 
 

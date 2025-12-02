@@ -21,6 +21,17 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $stmt = $db->prepare("SELECT id FROM users WHERE email = ?");
         $stmt->execute([$email]);
         $user = $stmt->fetch();
+
+        if ($user){
+            $error = "Dit e-mailadres bestaat al.";
+        }else {
+            $hashed = password_hash($password, PASSWORD_DEFAULT);
+
+            $stmt = $db->prepare("INSERT INTO users (username, email, password, wallet, is_admin) VALUES (?, ?, ?, 1000, 0)");
+            $stmt->execute([$username, $email, $hashed]);
+
+            $succes = "Account aangemaakt! Je kan nu inloggen.";
+        }
     }
 
 }

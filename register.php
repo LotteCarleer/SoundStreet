@@ -7,7 +7,23 @@ $db = new Database();
 $error = "";
 $succes = "";
 
+if($_SERVER["REQUEST_METHOD"] === "POST"){
 
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    if ($username === "" || $email === "" || $password === ""){
+          
+        $error = "alle velden zijn verplicht.";
+    } else {
+
+        $stmt = $db->prepare("SELECT id FROM users WHERE email = ?");
+        $stmt->execute([$email]);
+        $user = $stmt->fetch();
+    }
+
+}
 
 
 ?>

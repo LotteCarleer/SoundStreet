@@ -16,11 +16,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     if ($username === "" || $email === "" || $password === ""){
           
         $error = "alle velden zijn verplicht.";
-    } elseif ($password !== $password_confirm) {
-        $error = "Wachtwoorden komen niet overeen.";
-    }
-    
-    else {
+    } else {
 
         $stmt = $db->prepare("SELECT id FROM users WHERE email = ?");
         $stmt->execute([$email]);
@@ -34,7 +30,14 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             $stmt = $db->prepare("INSERT INTO users (username, email, password, wallet, is_admin) VALUES (?, ?, ?, 1000, 0)");
             $stmt->execute([$username, $email, $hashed]);
 
-            $success = "Account aangemaakt! Je kan nu inloggen.";
+            $_SESSION["logged_in"] = true;
+            $_SESSION["username"] = $username;
+            $_SESSION["email"] = $email;
+            $_SESSION["wallet"] = 100;
+            $_SESSION["is_admin"] = 0;
+
+            header("Location: index.php");
+            exit;
         }
     }
 
@@ -58,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 <?php endif; ?>    
 
 <?php if ($success != ""): ?>
-    <p style="color:green;" ><?= $succes ?></p>
+    <p style="color:green;" ><?= $success ?></p>
 <?php endif; ?>    
 
 

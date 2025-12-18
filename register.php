@@ -5,7 +5,7 @@ include_once(__DIR__ . "/classes/database.php");
 
 $db = new Database();
 $error = "";
-$succes = "";
+$success = "";
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
 
@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             $stmt = $db->prepare("INSERT INTO users (username, email, password, wallet, is_admin) VALUES (?, ?, ?, 1000, 0)");
             $stmt->execute([$username, $email, $hashed]);
 
-            $succes = "Account aangemaakt! Je kan nu inloggen.";
+            $success = "Account aangemaakt! Je kan nu inloggen.";
         }
     }
 

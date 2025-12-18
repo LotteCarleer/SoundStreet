@@ -16,7 +16,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     if ($username === "" || $email === "" || $password === ""){
           
         $error = "alle velden zijn verplicht.";
-    } else {
+    } elseif ($password !== $password_confirm) {
+        $error = "Wachtwoorden komen niet overeen.";
+    }
+    
+    else {
 
         $stmt = $db->prepare("SELECT id FROM users WHERE email = ?");
         $stmt->execute([$email]);

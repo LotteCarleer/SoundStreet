@@ -18,6 +18,8 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mijn account</title>
     <link rel="stylesheet" href="css/normalize.css">
+
+   
 </head>
 <body>
 

@@ -54,6 +54,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 </head>
 <body>
 
+<div>
 <h2>Registreren</h2>
 
 <?php if ($error != ""): ?>
@@ -72,5 +73,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 </form>
 
 <p>Heb je al een account? <a href="login.php">Log in</a></p>
+</div>
 </body>
 </html>

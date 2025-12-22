@@ -5,7 +5,7 @@ include_once(__DIR__ . "/classes/database.php");
 
 $db = new Database();
 $error = "";
-$success = "";
+
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
 

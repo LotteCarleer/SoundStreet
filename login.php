@@ -1,10 +1,9 @@
 <?php
 
 session_start();
+include_once(__DIR__ . "/classes/database.php");
 
-$correct_email = "Lotte@SoundStreet.com";
-$correct_password = "12345";
-
+$db = new Database();
 $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST"){

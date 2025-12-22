@@ -44,8 +44,53 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login
     </title>
+
+    <style>
+       
+       body{
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #D1C2A7;
+        min-height: 100vh;
+       }
+
+       .login{
+        background: #FAFAF9;
+        border-radius: 20px;
+        padding: 30px;
+       }
+
+       .login input{
+        width: 100%;
+        margin-top: 5px;
+       }
+
+       .login button{
+        width: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #B2AB9F;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 15px;font-weight: bold;
+         }
+
+         .login form a{
+            color: #9A8570;
+            font-weight: bold;
+         }
+
+    </style>
+
 </head>
 <body>
+
+<div class="login">
     <h2>Inloggen</h2>
 
     <?php if ($error != "" ): ?>
@@ -64,5 +109,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
         <button type="submit">Log in</button>
         <p>Heb je nog geen account? <a href="register.php">registreer hier</a></p>
     </form>
+</div>
 </body>
 </html>

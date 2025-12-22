@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn account</title>
+</head>
+<body>
+
+<h2>Mijn account</h2>
+
+<p><strong>Gebruikersnaam:</strong></p>
+<p><strong>Wallet:</strong> SoundCoins</p>
+
+<a href="admin/products.php">Ga naar admin</a>
+
+<a href="logout.php">uitloggen</a>
+    
+</body>
+</html>

@@ -60,9 +60,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <p style="color:red;" ><?= $error ?></p>
 <?php endif; ?>    
 
-<?php if ($success != ""): ?>
-    <p style="color:green;" ><?= $success ?></p>
-<?php endif; ?>    
+   
 
 
 

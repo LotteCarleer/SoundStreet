@@ -179,7 +179,7 @@ $categories = $category->all();
 
 
  
-<p><a href="logout.php">uitloggen</a></p>
+
 
     <div class="intro">
 

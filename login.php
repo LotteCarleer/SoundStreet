@@ -15,13 +15,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     $stmt->execute([$email]);
     $user = $stmt->fetch();
 
-    if ($email === $correct_email && $password === $correct_password){
-        $_SESSION["logged_in"] = true;
+   if ($user) {
+
+    if (password_verify($password, $user["password"])){
+
+        $_SESSION["Logged_in"] = true;
+        $_SESSION["user_id"] = $user["id"];
+        $_SESSION["username"] = $user["username"];
+        $_SESSION["Email"] = $user["email"];
+        $_SESSION["wallet"] = $user["wallet"];
+        $_SESSION["is_admin"] = $user["is_admin"];
+
         header("Location: index.php");
         exit;
-    } else {
-        $error = "Foutieve login.";
     }
+   }
+   
 }
 
 

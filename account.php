@@ -26,7 +26,9 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
 <p><strong>Gebruikersnaam:</strong><?= $_SESSION["username"] ?></p>
 <p><strong>Wallet:</strong> <?=  $_SESSION["wallet"] ?>  SoundCoins</p>
 
+<?php if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] == 1 ): ?>
 <a href="admin/products.php">Ga naar admin</a>
+<?php endif; ?>
 
 <br>
 

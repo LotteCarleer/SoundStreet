@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
         $_SESSION["Logged_in"] = true;
         $_SESSION["user_id"] = $user["id"];
         $_SESSION["username"] = $user["username"];
-        $_SESSION["Email"] = $user["email"];
+        $_SESSION["email"] = $user["email"];
         $_SESSION["wallet"] = $user["wallet"];
         $_SESSION["is_admin"] = $user["is_admin"];
 
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
         exit;
     }
    }
-   $error = "Foute email of wachtwoord"
+   $error = "Foute email of wachtwoord";
 }
 
 

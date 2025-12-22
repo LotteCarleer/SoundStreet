@@ -51,10 +51,53 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registreren</title>
+
+    <style>
+       
+       body{
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #D1C2A7;
+        min-height: 100vh;
+       }
+
+       .registreren{
+        background: #FAFAF9;
+        border-radius: 20px;
+        padding: 30px;
+       }
+
+       .registreren input{
+        width: 100%;
+        margin-top: 5px;
+       }
+
+       .registreren button{
+        width: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #B2AB9F;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 15px;font-weight: bold;
+         }
+
+         .registreren a{
+            color: #9A8570;
+            font-weight: bold;
+         }
+
+    </style>
+
 </head>
 <body>
 
-<div>
+<div class="registreren">
 <h2>Registreren</h2>
 
 <?php if ($error != ""): ?>

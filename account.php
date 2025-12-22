@@ -23,12 +23,19 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
 
 <h2>Mijn account</h2>
 
-<p><strong>Gebruikersnaam:</strong></p>
-<p><strong>Wallet:</strong> SoundCoins</p>
+<p><strong>Gebruikersnaam:</strong><?= $_SESSION["username"] ?></p>
+<p><strong>Wallet:</strong> <?=  $_SESSION["wallet"] ?>  SoundCoins</p>
 
 <a href="admin/products.php">Ga naar admin</a>
 
+<br>
+
+<a href="change_password.php">Wijzig wachtwoord</a>
+
+<br>
+
 <a href="logout.php">uitloggen</a>
+
     
 </body>
 </html>

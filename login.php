@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 <body>
     <h2>Inloggen</h2>
 
-    <?php if (!empty($error)) : ?>
+    <?php if ($error != "" ): ?>
       <p style="color:red;"><?php echo $error; ?></p>
     <?php endif; ?>
 
@@ -62,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
        <br><br>
         <button type="submit">Log in</button>
+        <p>Heb je nog geen account? <a href="register.php">registreer hier</a></p>
     </form>
 </body>
 </html>

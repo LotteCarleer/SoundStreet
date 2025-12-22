@@ -11,6 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     $email = $_POST["email"];
     $password = $_POST["password"];
 
+    $stmt = $db->prepare("SELECT * FROM users WHERE email = ?");
+    $stmt->execute([$email]);
+    $user = $stmt->fetch();
+
     if ($email === $correct_email && $password === $correct_password){
         $_SESSION["logged_in"] = true;
         header("Location: index.php");

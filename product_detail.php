@@ -18,6 +18,16 @@ if (!isset($_GET["id"])){
     exit;
 }
 
+$db = new Database();
+$productObj = new Product($db);
+
+$product = $productObj->find($_GET["id"]);
+
+if(!$product){
+    echo "Product niet gevonden.";
+    exit;
+}
+
 
 
 
@@ -37,10 +47,13 @@ if (!isset($_GET["id"])){
 
 <h1>Product pagina</h1>
 
+
 <div>
 
 <div>
-<img src="/" alt="Product picture">
+<?php if (!empty($product["image"])): ?>
+  <img src="<?= $product["image"] ?>" alt="Product picture">
+<?php endif; ?>
 </div>
 
 <div>

@@ -47,6 +47,48 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.products{
+   
+   margin: 60px ;
+}
+
+.product-container{
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.product-image{
+    border: 3px solid #9A8570;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.product-image img{
+    width: 350px;
+    display: block;
+}
+
+.product-info h2{
+    margin-top: 0;
+}
+
+.product-info p {
+    line-height: 1.5;
+}
+
+.koop{
+    margin-top: 15px;
+}
+
+.koop button {
+    padding: 10px 20px;
+    background-color: #D1C2A7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
 </style>
 </head>

@@ -40,23 +40,32 @@ if(!$product){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product details</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+</style>
 </head>
 <body>
 
-<div>
+<div class="products">
 
 <h1>Product pagina</h1>
 
 
-<div>
+<div class="product-container">
 
-<div>
+<div class= "product-image">
 <?php if (!empty($product["image"])): ?>
   <img src="<?= $product["image"] ?>" alt="Product picture">
 <?php endif; ?>
 </div>
 
-<div>
+<div class="product-info">
 
 <h2><?= htmlspecialchars($product["title"]) ?></h2>
 
@@ -70,7 +79,7 @@ if(!$product){
 
 <p>Binnen 2 werkdagen bezorgd</p>
 
-<div>
+<div class="koop">
     <button>Koop artikel</button>
 </div>
 

@@ -56,6 +56,7 @@ if (session_status() === PHP_SESSION_NONE){
 <a href="product.php" style="margin-right: 15px;">Products</a>
 
 <a href="account.php" style="margin-right: 15px;">Mijn account</a>
+<a href="cart.php">🛒</a>
 
 <?php if(!empty($_SESSION["is_admin"]) && $_SESSION["is_admin"] === true): ?>
 <a href="/admin/products.php">Admin Panel</a>

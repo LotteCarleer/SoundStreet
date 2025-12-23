@@ -139,6 +139,8 @@ $categories = $category->all();
         <img src="<?= $p["image"] ?>" alt="Product image">
        <?php endif; ?> 
 
+       <br><br>
+
 
        <a href="product_detail.php?id=<?= $p ['id'] ?>">
        <button>Bekijk details</button>

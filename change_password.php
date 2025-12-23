@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     $stmt->execute([$_SESSION["user_id"]]);
     $user = $stmt->fetch();
 
-    if (!user){
+    if (!$user){
         $error = "Gebruiker niet gevonden;";
     }
 }

@@ -33,6 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
             $hashed = password_hash($new_password, PASSWORD_DEFAULT);
 
+            $stmt = $db->prepare("UPDATE users SET password = ? WHERE id = ?");
+            $stmt->execute([$hashed, $_SESSION["user_id"]]);
+
+            $success = "Wachtwoord werd succesvol aangepast.";
+
 
         }
 

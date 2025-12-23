@@ -29,7 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
             $error = "Huidig wachtwoord is fout.";
         } elseif ($new_password === ""){
             $error = "Nieuw wachtwoord mag niet leeg zijn.";
-        } 
+        } else {
+
+            $hashed = password_hash($new_password, PASSWORD_DEFAULT);
+
+
+        }
 
 
         

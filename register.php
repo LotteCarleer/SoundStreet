@@ -109,10 +109,16 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
 
 <form method="POST">
-    <input type="text" name="username" placeholder="Gebruikersnaam"><br>
-    <input type="email" name="email" placeholder="Email" ><br>
-    <input type="password" name="password" placeholder="Wachtwoord"><br>
-    <button type="submit">Registreren</button>
+<label for="username">Username:</label>
+<input type="text" name="username" ><br><br>
+
+<label for="email">Email:</label>
+<input type="email" name="email" ><br><br>
+
+<label for="password">Password:</label>
+<input type="password" name="password" ><br><br>
+    
+<button type="submit">Registreren</button>
 </form>
 
 <p>Heb je al een account? <a href="login.php">Log in</a></p>

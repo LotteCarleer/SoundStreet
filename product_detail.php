@@ -1,3 +1,15 @@
+<?php 
+
+session_start();
+
+include 'includes/nav.php';
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -51,6 +63,7 @@
 
 </div>
 
+<?php include 'includes/footer.php'; ?>
     
 </body>
 </html>

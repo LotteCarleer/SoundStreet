@@ -16,6 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
     $current_password = $_POST["current_password"];
     $new_password = $_POST["new_password"];
+
+    $stmt = $db->prepare("SELECT password FROM users WHERE id = ?");
+    $stmt->execute([$_SESSION["user_id"]]);
+    $user = $stmt->fetch();
+
+    if (!user){
+        $error = "Gebruiker niet gevonden;";
+    }
 }
 
 ?>

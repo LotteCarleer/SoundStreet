@@ -6,6 +6,51 @@
     <title>Product details</title>
 </head>
 <body>
+
+<div>
+
+<h1>Product pagina</h1>
+
+<div>
+
+<div>
+<img src="/" alt="Product picture">
+</div>
+
+<div>
+
+<h2><?= htmlspecialchars($product["title"]) ?></h2>
+
+<p><?= htmlspecialchars($product["description"]) ?></p>
+
+<p><strong>Artiest:</strong>onbekend</p>
+<p><strong>Release:</strong>onbekend</p>
+<p><strong>Genre:</strong>onbekend</p>
+
+<p>Binnen 2 werkdagen bezorgd</p>
+
+<div>
+    <button>Koop artikel</button>
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
     
 </body>
 </html>

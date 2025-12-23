@@ -102,6 +102,22 @@ body{
     
 }
 
+@media (max-width: 768px){
+    .product-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .product-info{
+        text-align: center;
+    }
+}
+
 </style>
 </head>
 <body>

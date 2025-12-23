@@ -44,7 +44,7 @@ if(!$product){
 <style>
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;  
 }
 
 .products{
@@ -90,11 +90,25 @@ body{
     font-weight: bold;
 }
 
+.terug{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    background-color: #9A8570;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
 </style>
 </head>
 <body>
 
 <div class="products">
+
+<a class="terug" href="product.php">Ga terug</a>
 
 <h1>Product pagina</h1>
 

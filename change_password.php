@@ -3,6 +3,11 @@
 session_start();
 include_once(__DIR__ . "/classes/database.php");
 
+if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
+    header("Location: login.php");
+    exit;
+}
+
 
 ?>
 

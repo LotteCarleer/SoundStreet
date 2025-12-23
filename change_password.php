@@ -8,6 +8,15 @@ if(!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
     exit;
 }
 
+$db = new Database();
+$error = "";
+$success = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST"){
+
+    $current_password = $_POST["current_password"];
+    $new_password = $_POST["new_password"];
+}
 
 ?>
 

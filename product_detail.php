@@ -66,6 +66,8 @@ if(!$product){
 <p><strong>Release:</strong>onbekend</p>
 <p><strong>Genre:</strong>onbekend</p>
 
+<h3><strong>Prijs: </strong><?= $product["price"] ?> SoundCoins</h3>
+
 <p>Binnen 2 werkdagen bezorgd</p>
 
 <div>

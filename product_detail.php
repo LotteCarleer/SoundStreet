@@ -108,7 +108,7 @@ body{
 
 <div class="products">
 
-<a class="terug" href="product.php">Ga terug</a>
+<a class="terug" href="product.php">Ga terug</a> <br><br>
 
 <h1>Product pagina</h1>
 

@@ -23,6 +23,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
     if (!$user){
         $error = "Gebruiker niet gevonden;";
+    } else {
+
+        if (!password_verify($current_password, $user["password"])){
+            $error = "Huidig wachtwoord is fout.";
+        } elseif ($new_password === ""){
+            $error = "Nieuw wachtwoord mag niet leeg zijn.";
+        } 
+
+
+        
     }
 }
 

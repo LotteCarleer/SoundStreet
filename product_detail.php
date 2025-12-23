@@ -10,6 +10,14 @@ if (!isset($_SESSION["logged_in"])){
 
 }
 
+include_once(__DIR__ . "/classes/database.php");
+include_once(__DIR__ . "/classes/Product.php");
+
+if (!isset($_GET["id"])){
+    header("Location: product.php");
+    exit;
+}
+
 
 
 

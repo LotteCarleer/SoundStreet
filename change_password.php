@@ -59,6 +59,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
 <h2>Wachtwoord wijzigen</h2>
 
+<?php if ($error != ""): ?>
+    <p style="color:red;"><?= $error ?></p>
+<?php endif; ?> 
+
+<?php if ($success != ""): ?>
+    <p style="color:green;"><?= $success ?></p>
+<?php endif; ?>    
+
 <a href="account.php">Ga terug</a>
 
 <form method="POST">

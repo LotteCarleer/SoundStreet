@@ -2,6 +2,8 @@
 
 session_start();
 
+include 'includes/nav.php';
+
 if (!isset($_SESSION["logged_in"])){
     header("Location: login.php");
     exit;
@@ -46,7 +48,10 @@ $total = $subtotal + $shipping;
   
   body{
     font-family: Arial, Helvetica, sans-serif;
+    
   }
+
+ 
 
   .cart{
     max-width: 1000px;
@@ -154,6 +159,8 @@ $total = $subtotal + $shipping;
 </div>
 
 <a href="product.php">Verder winkelen</a>
+
+<?php include 'includes/footer.php'; ?>
     
 </body>
 </html>

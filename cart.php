@@ -76,10 +76,10 @@ $total = $subtotal + $shipping;
 <div>
     <h3>Besteloverzicht</h3>
 
-    <p>Subtotaal: SoundCoins</p>
-    <p>Verzending: SoundCoins</p>
+    <p>Subtotaal: <?= $subtotal ?>SoundCoins</p>
+    <p>Verzending: <?= $shipping ?> SoundCoins</p>
     <br>
-    <p><strong>Totaal: SoundCoins</strong></p>
+    <p><strong>Totaal: <?= $total ?> SoundCoins</strong></p>
 
     <button>Betaal met SoundCoins</button>
 

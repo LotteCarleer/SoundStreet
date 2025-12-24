@@ -147,7 +147,7 @@ $total = $subtotal + $shipping;
 
     
     <form method="POST">
-        <input type="hidden" name="remove" >
+        <input type="hidden" name="remove" value="<?= $index ?>" >
         <button type="submit">
             🗑️
         </button>

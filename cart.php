@@ -17,6 +17,22 @@ if(!isset($_SESSION["cart"])){
     $_SESSION["cart"] = [];
 }
 
+if (isset($_POST["product_id"])){
+    $product = $productObj->find($_POST["product_id"]);
+
+    if ($product){
+        $_SESSION["cart"][] = $product;
+    }
+}
+
+$subtotal = 0;
+foreach ($_SESSION["cart"] as $item){
+    $subtotal += $item["price"];
+}
+
+$shipping = 2;
+$total = $subtotal + $shipping;
+
 
 
 ?>
@@ -30,12 +46,13 @@ if(!isset($_SESSION["cart"])){
 <body>
 
 <h1>Winkelmandje</h1>
-<p>Je hebt ... artikelen in je winkelmand</p>
+<p>Je hebt <?= count($_SESSION["cart"]) ?> artikelen in je winkelmand</p>
 
 <div>
 
 <div>
 
+<?php foreach ($_SESSION["cart"] as $item): ?>
 <div>
     <img src="<?= $item["image"] ?>" alt="product">
 
@@ -49,9 +66,11 @@ if(!isset($_SESSION["cart"])){
     </div>
 
 </div>
+<?php endforeach; ?>
 
+<?php if (empty($_SESSION["cart"])): ?>
 <p>Je winkelmandje is leeg</p>
-
+<?php endif; ?>
 </div>
 
 <div>

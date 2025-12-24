@@ -18,9 +18,45 @@ if (!isset($_SESSION["logged_in"])){
 </head>
 <body>
 
-<h2>Winkelmandje</h2>
+<h1>Winkelmandje</h1>
+<p>Je hebt ... artikelen in je winkelmand</p>
 
-<p>Je winkelmandje is voorlopig leeg</p>
+<div>
+
+<div>
+
+<div>
+    <img src="<?= $item["image"] ?>" alt="product">
+
+    <div>
+        <h3><?= htmlspecialchars($item["title"]) ?></h3>
+        <p>Wordt binnen 2 werkdagen bezorgd</p>
+    </div>
+
+    <div>
+        <?= $item["price"] ?> SoundCoins
+    </div>
+
+</div>
+
+<p>Je winkelmandje is leeg</p>
+
+</div>
+
+<div>
+    <h3>Besteloverzicht</h3>
+
+    <p>Subtotaal: SoundCoins</p>
+    <p>Verzending: SoundCoins</p>
+    <br>
+    <p><strong>Totaal: SoundCoins</strong></p>
+
+    <button>Betaal met SoundCoins</button>
+
+
+</div>
+
+</div>
 
 <a href="product.php">Verder winkelen</a>
     

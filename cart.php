@@ -7,6 +7,13 @@ if (!isset($_SESSION["logged_in"])){
     exit;
 }
 
+include_once(__DIR__ . "/classes/database.php");
+include_once(__DIR__ . "/classes/Product.php");
+
+$db = new Database();
+$productObj = new Product($db);
+
+
 
 ?>
 <!DOCTYPE html>

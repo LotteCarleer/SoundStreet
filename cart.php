@@ -13,6 +13,10 @@ include_once(__DIR__ . "/classes/Product.php");
 $db = new Database();
 $productObj = new Product($db);
 
+if(!isset($_SESSION["cart"])){
+    $_SESSION["cart"] = [];
+}
+
 
 
 ?>

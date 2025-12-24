@@ -124,6 +124,7 @@ $total = $subtotal + $shipping;
 <div class="cart-items" > 
 
 <?php foreach ($_SESSION["cart"] as $item): ?>
+
 <div class="cart-item" >
     <img src="<?= $item["image"] ?>" alt="product">
 
@@ -135,6 +136,13 @@ $total = $subtotal + $shipping;
     <div class="price">
         <?= $item["price"] ?> SoundCoins
     </div>
+
+    <form method="POST">
+        <input type="hidden" name="remove">
+        <button type="submit">
+            🗑️
+        </button>
+    </form>
 
 </div>
 <?php endforeach; ?>

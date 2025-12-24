@@ -151,9 +151,11 @@ body{
 
 <p>Binnen 2 werkdagen bezorgd</p>
 
-<div class="koop">
-    <button>Koop artikel</button>
-</div>
+ 
+<form action="cart.php" method="POST" class="koop">
+    <input type="hidden" name="product_id" value="<?= $product['id'] ?>" >
+    <button type="submit">Voeg toe aan winkelwagen</button>
+</form>
 
 
 </div>

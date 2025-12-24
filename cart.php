@@ -27,6 +27,14 @@ if (isset($_POST["product_id"])){
     }
 }
 
+if (isset($_POST["remove"])){
+    $index = $_POST["remove"];
+
+    if(isset($_SESSION["cart"][$index])){
+        unset($_SESSION["cart"][$index]);
+    }
+}
+
 $subtotal = 0;
 foreach ($_SESSION["cart"] as $item){
     $subtotal += $item["price"];
@@ -123,7 +131,7 @@ $total = $subtotal + $shipping;
 
 <div class="cart-items" > 
 
-<?php foreach ($_SESSION["cart"] as $item): ?>
+<?php foreach ($_SESSION["cart"] as $index => $item): ?>
 
 <div class="cart-item" >
     <img src="<?= $item["image"] ?>" alt="product">
@@ -137,12 +145,14 @@ $total = $subtotal + $shipping;
         <?= $item["price"] ?> SoundCoins
     </div>
 
+    
     <form method="POST">
-        <input type="hidden" name="remove">
+        <input type="hidden" name="remove" >
         <button type="submit">
             🗑️
         </button>
     </form>
+    
 
 </div>
 <?php endforeach; ?>

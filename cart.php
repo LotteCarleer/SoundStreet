@@ -55,8 +55,8 @@ $total = $subtotal + $shipping;
  
 
   .cart{
-    max-width: 1000px;
-    margin: 20px;
+    max-width: 1200px;
+    margin: 40px  ;
     display: flex;
     gap: 40px;
   }

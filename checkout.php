@@ -24,7 +24,7 @@ if (!isset($_SESSION["logged_in"])){
 
 <p>Je betaling met soundCoins is succesvol afgerond.</p>
 
-<p><strong>Huidig saldo: </strong></p>
+<p><strong>Huidig saldo: </strong> <?= $_SESSION["wallet"] ?></p>
 
 <a href="account.php">
     <button>Ga naar mijn account</button>

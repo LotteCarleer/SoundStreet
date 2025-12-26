@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bestelling bevestigd</title>
+    
 </head>
 <body>
-    test
+    
+<h1>Bedankt voor je aankoop!</h1>
+
+<p>Je betaling met soundCoins is succesvol afgerond.</p>
+
+<p><strong>Huidig saldo: </strong></p>
+
+<a href="account.php">
+    <button>Ga naar mijn account</button>
+</a>
+
+
 </body>
 </html>

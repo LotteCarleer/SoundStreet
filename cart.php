@@ -156,6 +156,8 @@ if (isset($_POST["checkout"])){
 <h1>Winkelmandje</h1>
 <p>Je hebt <?= count($_SESSION["cart"]) ?> artikelen in je winkelmand</p>
 
+
+
 <div class="cart" >
 
 <div class="cart-items" > 
@@ -187,7 +189,10 @@ if (isset($_POST["checkout"])){
 <?php endforeach; ?>
 
 <?php if (empty($_SESSION["cart"])): ?>
-<p>Je winkelmandje is leeg</p>
+    <?php if ($error != ""): ?>
+<p style="color:red;" ><?= $error ?></p>
+<?php endif; ?>
+
 <?php endif; ?>
 </div>
 

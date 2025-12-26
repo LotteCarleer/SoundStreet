@@ -24,6 +24,43 @@ if (!isset($_SESSION["logged_in"])){
         background-color: #F5F5F5;
     }
 
+    .checkout{
+       max-width: 600px;
+       margin: 80px auto;
+       background-color: #B2AB9F;
+       padding: 40px;
+       border-radius: 20px;
+       text-align: center;
+
+    
+    }
+
+    .checkout h1{
+        margin-top: 0;
+    }
+
+    .checkout p{
+        font-size: 20px;
+        margin: 15px 0;
+    }
+
+    .saldo{
+        font-weight: bold;
+        font-size: 22px;
+        margin-top: 20px;
+    }
+
+    .checkout button{
+        margin-top: 30px;
+        padding: 12px 25px;
+        background-color: #FAFAF9;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
 
 
      

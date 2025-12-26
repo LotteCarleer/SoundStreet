@@ -57,12 +57,6 @@ if (isset($_POST["checkout"])){
     } 
 
     else {
-        $_SESSION["wallet"] -= $total;
-
-        $stmt = $db->prepare("UPDATE users SET wallet = ? WHERE id = ?");
-        $stmt->execute([$_SESSION["wallet"], $_SESSION["user_id"]]);
-
-        $_SESSION["cart"] = [];
 
         $stmt = $db->prepare("INSERT INTO orders (user_id, total, created_at) VALUES (?, ?, NOW())");
         $stmt->execute([$_SESSION["user_id"], $total]);
@@ -74,6 +68,15 @@ if (isset($_POST["checkout"])){
 
             $stmt->execute([$order_id, $item["title"], $item["price"]]);
         }
+
+        $_SESSION["wallet"] -= $total;
+
+        $stmt = $db->prepare("UPDATE users SET wallet = ? WHERE id = ?");
+        $stmt->execute([$_SESSION["wallet"], $_SESSION["user_id"]]);
+
+        $_SESSION["cart"] = [];
+
+        
 
         header("Location: checkout.php");
         exit;

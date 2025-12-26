@@ -64,6 +64,11 @@ if (isset($_POST["checkout"])){
 
         $_SESSION["cart"] = [];
 
+        $stmt = $db->prepare("INSERT INTO orders (user_id, total, created_at) VALUES (?, ?, NOW())");
+        $stmt->execute([$_SESSION["user_id"], $total]);
+
+        $order_id = $db->lastInsertId();
+
         header("Location: checkout.php");
         exit;
     }

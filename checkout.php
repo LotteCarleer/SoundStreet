@@ -33,6 +33,7 @@ if (!isset($_SESSION["logged_in"])){
 </head>
 <body>
     
+<div class="checkout" >
 <h1>Bedankt voor je aankoop!</h1>
 
 <p>Je betaling met soundCoins is succesvol afgerond.</p>
@@ -42,7 +43,7 @@ if (!isset($_SESSION["logged_in"])){
 <a href="account.php">
     <button>Ga naar mijn account</button>
 </a>
-
+</div>
 
 </body>
 </html>

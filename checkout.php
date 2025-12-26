@@ -16,6 +16,19 @@ if (!isset($_SESSION["logged_in"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestelling bevestigd</title>
+
+<style>
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #F5F5F5;
+    }
+
+
+
+     
+
+</style>
     
 </head>
 <body>
@@ -24,7 +37,7 @@ if (!isset($_SESSION["logged_in"])){
 
 <p>Je betaling met soundCoins is succesvol afgerond.</p>
 
-<p><strong>Huidig saldo: </strong> <?= $_SESSION["wallet"] ?></p>
+<p class="saldo" >Huidig saldo: </strong> <?= $_SESSION["wallet"] ?></p>
 
 <a href="account.php">
     <button>Ga naar mijn account</button>

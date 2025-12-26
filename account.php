@@ -34,6 +34,11 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
 
 <br>
 
+<a href="orders.php">Bestellingen</a>
+
+<br>
+
+
 <a href="change_password.php">Wijzig wachtwoord</a>
 
 <br>

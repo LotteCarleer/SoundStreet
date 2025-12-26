@@ -56,6 +56,18 @@ if (isset($_POST["checkout"])){
         $error = "Je hebt onvoldoende SoundCoins";
     } 
 
+    else {
+        $_SESSION["wallet"] -= $total;
+
+        $stmt = $db->prepare("UPDATE users SET wallet = ? WHERE id = ?");
+        $stmt->execute([$_SESSION["wallet"], $_SESSION["user_id"]]);
+
+        $_SESSION["cart"] = [];
+
+        header("Location: checkout.php");
+        exit;
+    }
+
   
     
     

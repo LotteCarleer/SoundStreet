@@ -69,6 +69,12 @@ if (isset($_POST["checkout"])){
 
         $order_id = $db->lastInsertId();
 
+        foreach ($_SESSION["cart"] as $item){
+            $stmt = $db->prepare("INSERT INTO order_items (order_id, product_title, product_price) VALUES (?, ?, ?)");
+
+            $stmt->execute([$order_id, $item["title"], $item["price"]]);
+        }
+
         header("Location: checkout.php");
         exit;
     }

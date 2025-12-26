@@ -43,6 +43,23 @@ foreach ($_SESSION["cart"] as $item){
 $shipping = 2;
 $total = $subtotal + $shipping;
 
+$error = "";
+
+if (isset($_POST["checkout"])){
+
+    if (empty($_SESSION["cart"])){
+
+        $error = "Je winkelmandje is leeg";
+    } 
+    
+    elseif ($_SESSION["wallet"]< $total) {
+        $error = "Je hebt onvoldoende SoundCoins";
+    } 
+
+  
+    
+    
+}
 
 
 ?>

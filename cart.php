@@ -170,8 +170,9 @@ $total = $subtotal + $shipping;
     <br>
     <p><strong>Totaal: <?= $total ?> SoundCoins</strong></p>
 
-    <button>Betaal met SoundCoins</button>
-
+<form method="POST">
+    <button type="submit" name="checkout" >Betaal met SoundCoins</button>
+</form>
 
 </div>
 

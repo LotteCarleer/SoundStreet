@@ -89,6 +89,9 @@ $error = "Product toegevoegd!";
         <input type="text" name="title" placeholder="Titel"><br><br>
         <textarea name="description" placeholder="Beschrijving"></textarea><br><br>
         <input type="number" name="price" placeholder="Prijs" ><br><br>
+        <input type="text" name="artist" placeholder="Artiest"><br><br>
+        <input type="text" name="genre" placeholder="Genre"><br><br>
+        <input type="number" name="release_year" placeholder="Release Jaar"><br><br>
 
         <?php 
         $cats = $category->all();

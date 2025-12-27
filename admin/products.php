@@ -130,6 +130,16 @@ if (isset($_POST["delete_product"])){
         font-weight: bold;
       }
 
+      .back{
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px;
+        background-color: #9A8570;
+        border-radius: 10px;
+        font-weight: bold;
+        color:#FAFAF9
+      }
+
     </style>
 </head>
 <body>

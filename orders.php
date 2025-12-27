@@ -48,6 +48,15 @@ $orders = $stmt->fetchAll();
 
 <ul>
 
+<?php
+
+$stmt = $db->prepare("SELECT * FROM order_items WHERE order_id = ?");
+$stmt->execute([$order["id"]]);
+$items = $stmt->fetchAll();
+
+foreach ($items as $item):
+?>
+
 <li>
 "product and price"
 </li>

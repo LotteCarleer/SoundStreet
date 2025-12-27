@@ -123,5 +123,29 @@ if (isset($_POST["delete_product"])){
     <input type="file" name="image" ><br><br>
     <button name="add_product">Toevoegen</button>
      </form>
+
+     <hr>
+
+     <h2>Bestaande producten wijzigen of verwijderen</h2>
+
+     <form method="POST">
+
+     <input type="hidden" name="product_id" value="<?= $p['id'] ?>">
+
+     <input type="text" name="title" value="<?= htmlspecialchars($p["title"]) ?>"><br><br>
+     <textarea name="description" ><?= htmlspecialchars($p['description']) ?></textarea><br><br>
+     <input type="number" name="price" value="<?= $p['price'] ?>" ><br><br>
+
+     <input type="text" name="artist" value="<?= $p['artist'] ?>"><br><br>
+     <input type="text" name="genre" value="<?= $p['genre'] ?>"><br><br>
+     <input type="number" name="release_year" value="<?= $p['release_year'] ?>"><br><br>
+
+     <button type="submit" name="update_product" >Bewerken</button>
+     <button type="submit" name="delete_product">Verwijderen</button>
+
+
+
+
+     </form>
 </body>
 </html>

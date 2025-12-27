@@ -138,6 +138,9 @@ if (isset($_POST["delete_product"])){
   <p style="color:red;" ><?= $error ?></p>
  <?php endif; ?> 
 
+ <a href="../account.php" class="back" >Ga terug</a>
+
+
     <h2>Categorie toevoegen</h2>
     <form method="POST" class="admin">
 

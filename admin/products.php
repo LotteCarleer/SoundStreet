@@ -29,6 +29,9 @@ if (isset($_POST['add_product'])){
     $desc = $_POST['description'];
     $price = $_POST['price'];
     $cat_id = $_POST['category_id'];
+    $artist = $_POST['artist'];
+    $genre = $_POST['genre'];
+    $release_year = $_POST['release_year'];
 
     if ($title == ""){
       $error = "Titel mag niet leeg zijn.";

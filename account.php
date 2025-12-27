@@ -49,6 +49,27 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
             margin: 10px 0;
         }
 
+        .wallet{
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .account-links{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .account-links a{
+            text-decoration: none;
+            background-color: #9A8570;
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
 
 
 

@@ -36,11 +36,13 @@ $orders = $stmt->fetchAll();
 <p>Je hebt nog geen bestellingen geplaatst</p>
 <?php endif; ?>
 
+<?php foreach ($orders as $order): ?>
+
 <div>
 
-<h3>Bestelling</h3>
-<p>Datum:</p>
-<p>Totaal:</p>
+<h3>Bestelling: <?php echo $order["id"]; ?></h3>
+<p>Datum: <?php echo $order["created_at"]; ?> </p>
+<p>Totaal: <?php echo $order["total"]; ?> SoundCoins</p>
 
 <h4>Artikelen</h4>
 
@@ -56,6 +58,8 @@ $orders = $stmt->fetchAll();
     
 
 </div>
+
+<?php endforeach; ?>
 
 <a href="account.php">Terug naar account</a>
     

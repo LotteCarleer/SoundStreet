@@ -44,6 +44,7 @@ if (isset($_POST['add_product'])){
     } else{
      
       $image = "";
+
 if (!empty($_FILES["image"]["name"])){
   $image = "uploads/products/" . $_FILES["image"]["name"];
   move_uploaded_file($_FILES["image"]["tmp_name"], "../" . $image);
@@ -54,6 +55,14 @@ $error = "Product toegevoegd!";
 
     }
 
+}
+
+if (isset($_POST["update_product"])){
+  $product->update($_POST["product_id"], $_POST["title"], $_POST["description"], $_POST["price"], $_POST["artist"], $_POST["genre"], $_POST["release_year"] );
+}
+
+if (isset($_POST["delete_product"])){
+  $product->delete($_POST["product_id"]);
 }
 
 

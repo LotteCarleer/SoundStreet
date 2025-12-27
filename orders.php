@@ -58,9 +58,10 @@ foreach ($items as $item):
 ?>
 
 <li>
-"product and price"
+<?php htmlspecialchars($item["product_title"]) ?>
+<?php $item["product_price"] ?> SoundCoins
 </li>
-
+<?php endforeach; ?>
 
 
 </ul>

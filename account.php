@@ -71,6 +71,13 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
             font-weight: bold;
         }
 
+        .account-links .admin{
+            background-color: #5e5e5e;
+        }
+
+        .account-links .logout{
+            background-color: #b36a6a;
+        }
 
 
     </style>

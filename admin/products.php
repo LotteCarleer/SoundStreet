@@ -49,7 +49,7 @@ if (!empty($_FILES["image"]["name"])){
   move_uploaded_file($_FILES["image"]["tmp_name"], "../" . $image);
 }
 
-$product->add($title, $desc, $price, $cat_id, $image);
+$product->add($title, $desc, $price, $cat_id, $image, $artist, $genre, $release_year);
 $error = "Product toegevoegd!";
 
     }

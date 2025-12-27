@@ -31,7 +31,16 @@ class Product {
         return $stmt->fetch();
     }
 
+    public function update($id, $title, $description, $price, $artist, $genre, $release_year){
+        $stmt = $this->db->prepare("UPDATE products SET title = ?, description = ?, price = ?, artist = ?, genre = ?, release_year = ? WHERE id = ?");
+
+        return $stmt->execute([ $title, $description, $price, $artist, $genre, $release_year, $id ]);
+    }
     
+    public function delete($id){
+        $stmt = $this->db->prepare("DELETE FROM products WHERE id = ?");
+        return $stmt->execute([$id]);
+    }
 }
 
 

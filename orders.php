@@ -26,6 +26,37 @@ $orders = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mijn bestellingen</title>
+  
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #F5F5F5;
+        }
+
+        .order{
+            border: 2px solid #9A8570;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 50px;
+            background-color: #D1C2A7;
+        }
+
+        .order h3{
+            margin-top: 0;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #9A8570;
+            margin-left: 20px;
+            color: #F5F5F5;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+    </style>
+
 </head>
 <body>
 

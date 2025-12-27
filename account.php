@@ -89,7 +89,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
 
 <div class="account-links" > 
 <?php if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] == 1 ): ?>
-<a href="admin/products.php">Ga naar admin</a>
+<a href="admin/products.php" class="admin" >Ga naar admin</a>
 <?php endif; ?>
 
 <br>
@@ -103,7 +103,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
 
 <br>
 
-<a href="logout.php">uitloggen</a>
+<a  href="logout.php" class="logout" >uitloggen</a>
 
 </div>
 

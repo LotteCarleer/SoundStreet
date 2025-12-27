@@ -23,11 +23,15 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
 </head>
 <body>
 
+<div class="account-container">
 <h2>Mijn account</h2>
 
+<div class="account-info">
 <p><strong>Gebruikersnaam:</strong><?= $_SESSION["username"] ?></p>
 <p><strong>Wallet:</strong> <?=  $_SESSION["wallet"] ?>  SoundCoins</p>
+</div>
 
+<div class="account-links" > 
 <?php if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] == 1 ): ?>
 <a href="admin/products.php">Ga naar admin</a>
 <?php endif; ?>
@@ -44,6 +48,10 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
 <br>
 
 <a href="logout.php">uitloggen</a>
+
+</div>
+
+</div>
 
     
 </body>

@@ -143,9 +143,17 @@ body{
 
 <p><?= htmlspecialchars($product["description"]) ?></p>
 
-<p><strong>Artiest:</strong>onbekend</p>
-<p><strong>Release:</strong>onbekend</p>
-<p><strong>Genre:</strong>onbekend</p>
+<?php if(!empty($product["artist"])): ?>
+<p><strong>Artiest:</strong> <?=  htmlspecialchars($product["artist"])?></p>
+<?php endif; ?>
+
+<?php if(!empty($product["release_year"])): ?>
+<p><strong>Release:</strong> <?=  $product["release_year"] ?></p>
+<?php endif; ?>
+
+<?php if(!empty($product["genre"])): ?>
+<p><strong>Genre:</strong><?= htmlspecialchars($product["genre"])?></p>
+<?php endif; ?>
 
 <h3><strong>Prijs: </strong><?= $product["price"] ?> SoundCoins</h3>
 

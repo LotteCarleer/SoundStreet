@@ -17,12 +17,12 @@ class Product {
         return $stmt->fetchAll();
     }
 
-    public function add($title, $description, $price, $category_id, $image){
+    public function add($title, $description, $price, $category_id, $image, $artist, $genre, $release_year){
         $stmt = $this->db->prepare("
-         INSERT INTO products (title, description, price, category_id, image)
-        VALUES (?, ?, ?, ?, ?)
+         INSERT INTO products (title, description, price, category_id, image, artist, genre, release_year)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     ");
-    return $stmt->execute([$title, $description, $price, $category_id, $image]);
+    return $stmt->execute([$title, $description, $price, $category_id, $image, $artist, $genre, $release_year]);
     }
 
     public function find($id){

@@ -58,8 +58,8 @@ foreach ($items as $item):
 ?>
 
 <li>
-<?php htmlspecialchars($item["product_title"]) ?>
-<?php $item["product_price"] ?> SoundCoins
+<?php echo htmlspecialchars($item["product_title"]); ?> -
+<?php  echo $item["product_price"]; ?> SoundCoins
 </li>
 <?php endforeach; ?>
 

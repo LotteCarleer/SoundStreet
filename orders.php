@@ -13,6 +13,10 @@ include_once(__DIR__ . "/classes/database.php");
 
 $db = new Database();
 
+$stmt = $db->prepare("SELECT * FROM orders WHERE user_id = ? ORDER BY created_at DESC");
+$stmt->execute([$_SESSION["user_id"]]);
+$orders = $stmt->fetchAll();
+
 
 ?>
 

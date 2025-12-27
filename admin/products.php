@@ -77,7 +77,59 @@ if (isset($_POST["delete_product"])){
     <title>Categorie toevoegen</title>
 
     <style>
+
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #FAFAF9;
+        padding: 30px;
+      }
+
+      h2{
+        margin-top: 40px;
+      }
+
+      .admin{
+        background-color: #B2AB9F;
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 600px;
+        margin-bottom: 30px;
+      }
       
+      .admin input, .admin textarea, .admin select{
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #9A8570;
+      }
+      
+      .admin button{
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background-color: #FAFAF9;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .product-item{
+        background-color: #e3dccf;
+        padding: 20px;
+        border-radius: 15px;
+        max-width: 700px;
+        margin-bottom: 25px;
+      }
+
+      .product-item button{
+        background-color: #FAFAF9;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 10px;
+        font-weight: bold;
+      }
+
     </style>
 </head>
 <body>
@@ -87,14 +139,14 @@ if (isset($_POST["delete_product"])){
  <?php endif; ?> 
 
     <h2>Categorie toevoegen</h2>
-    <form method="POST">
+    <form method="POST" class="admin">
 
       <input type="text" name="category_name" placeholder="Naam nieuwe categorie"><br><br>
       <button name="add_category">Toevoegen</button>
 
     </form>
      <h2>Product toevoegen</h2>
-     <form method="POST" enctype="multipart/form-data">
+     <form method="POST" enctype="multipart/form-data" class="admin">
         <input type="text" name="title" placeholder="Titel"><br><br>
         <textarea name="description" placeholder="Beschrijving"></textarea><br><br>
         <input type="number" name="price" placeholder="Prijs" ><br><br>
@@ -128,7 +180,8 @@ if (isset($_POST["delete_product"])){
 
      <h2>Bestaande producten wijzigen of verwijderen</h2>
 
-     <form method="POST">
+     <?php foreach($product->all() as $p): ?>
+     <form method="POST" class="product-item">
 
      <input type="hidden" name="product_id" value="<?= $p['id'] ?>">
 
@@ -136,16 +189,14 @@ if (isset($_POST["delete_product"])){
      <textarea name="description" ><?= htmlspecialchars($p['description']) ?></textarea><br><br>
      <input type="number" name="price" value="<?= $p['price'] ?>" ><br><br>
 
-     <input type="text" name="artist" value="<?= $p['artist'] ?>"><br><br>
-     <input type="text" name="genre" value="<?= $p['genre'] ?>"><br><br>
-     <input type="number" name="release_year" value="<?= $p['release_year'] ?>"><br><br>
+     <input type="text" name="artist" placeholder="Artiest" <?= $p['artist']?>"><br><br>
+     <input type="text" name="genre" placeholder="Genre" value="<?= $p['genre'] ?>"><br><br>
+     <input type="number" name="release_year" placeholder="Release jaar" value="<?= $p['release_year'] ?>"><br><br>
 
      <button type="submit" name="update_product" >Bewerken</button>
      <button type="submit" name="delete_product">Verwijderen</button>
 
-
-
-
-     </form>
+   </form>
+   <?php endforeach; ?>
 </body>
 </html>

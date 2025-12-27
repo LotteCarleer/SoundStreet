@@ -19,6 +19,41 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
     <title>Mijn account</title>
     <link rel="stylesheet" href="css/normalize.css">
 
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #FAFAF9;
+        }
+
+        .account-container{
+            max-width: 600px;
+            margin: 60px;
+            padding: 30px;
+        }
+
+        .account-container h2{
+            text-align: center;
+            margin-bottom: 3àpx;
+        }
+
+        .account-info{
+            background-color: #D1C2A7;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .account-info p{
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+
+
+
+    </style>
+
    
 </head>
 <body>

@@ -63,7 +63,7 @@ if (!isset($_SESSION["logged_in"]) || $_SESSION["logged_in"] !== true ){
 
 <div class="account-info">
 <p><strong>Gebruikersnaam:</strong><?= $_SESSION["username"] ?></p>
-<p><strong>Wallet:</strong> <?=  $_SESSION["wallet"] ?>  SoundCoins</p>
+<p class="wallet"><strong>Wallet:</strong> <?=  $_SESSION["wallet"] ?>  SoundCoins</p>
 </div>
 
 <div class="account-links" > 

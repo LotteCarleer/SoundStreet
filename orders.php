@@ -38,7 +38,7 @@ $orders = $stmt->fetchAll();
 
 <?php foreach ($orders as $order): ?>
 
-<div>
+<div class="order">
 
 <h3>Bestelling: <?php echo $order["id"]; ?></h3>
 <p>Datum: <?php echo $order["created_at"]; ?> </p>

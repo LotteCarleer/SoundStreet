@@ -31,7 +31,10 @@ $orders = $stmt->fetchAll();
 
 <h1>Mijn bestellingen</h1>
 
+
+<?php if (empty($orders)): ?>
 <p>Je hebt nog geen bestellingen geplaatst</p>
+<?php endif; ?>
 
 <div>
 

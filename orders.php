@@ -9,6 +9,10 @@ if (!isset($_SESSION["logged_in"])){
 
 }
 
+include_once(__DIR__ . "/classes/database.php");
+
+$db = new Database();
+
 
 ?>
 

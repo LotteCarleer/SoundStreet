@@ -60,13 +60,15 @@ if (isset($_POST["checkout"])){
 
         $stmt = $db->prepare("INSERT INTO orders (user_id, total, created_at) VALUES (?, ?, NOW())");
         $stmt->execute([$_SESSION["user_id"], $total]);
-
-        $order_id = $db->lastInsertId();
+         
+        $stmt = $db->prepare("SELECT LAST_INSERT_ID()");
+        $stmt->execute();
+        $order_id = $stmt->fetchColumn();
 
         foreach ($_SESSION["cart"] as $item){
-            $stmt = $db->prepare("INSERT INTO order_items (order_id, product_title, product_price) VALUES (?, ?, ?)");
+            $stmt = $db->prepare("INSERT INTO order_items (order_id, product_id, product_title, product_price) VALUES (?, ?, ?, ?)");
 
-            $stmt->execute([$order_id, $item["title"], $item["price"]]);
+            $stmt->execute([$order_id, $item["id"], $item["title"], $item["price"]]);
         }
 
         $_SESSION["wallet"] -= $total;

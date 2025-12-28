@@ -190,7 +190,7 @@ body{
 
 <h3>Beoordelingen</h3>
 
-<div class="comments">
+<div id="comments">
     <textarea name="CommentText" class="commentText" placeholder="Schrijf een reactie"></textarea><br>
     <button id="sendComment" >Plaats reactie</button>
 
@@ -199,6 +199,39 @@ body{
 </div>
 
 <?php include 'includes/footer.php'; ?>
+
+<script>
+
+    function loadComments(){
+        fetch("load_comments.php?product_id=<?= $product['id'] ?>")
+        .then(function(response) {
+            return response.text();
+
+        })
+        .then(function(html) {
+
+            document.getElementById("comments").innerHTML = html;
+        });
+    }
+
+    var button = document.getElementById("sendComment");
+
+    if (button){
+        button.addEventListener("click", function (){
+
+            var text = document.getElementById("commentText").value;
+
+            if (text == ""){
+                return;
+            } 
+
+        
+
+        });
+    }
+
+
+</script>
     
 </body>
 </html>

@@ -190,20 +190,24 @@ body{
 
 <h3>Beoordelingen</h3>
 
-<div id="comments">
-    <textarea name="CommentText" class="commentText" placeholder="Schrijf een reactie"></textarea><br>
+<div id="comments"></div>
+
+<?php if ($bought): ?>
+    <textarea name="CommentText" id="commentText" placeholder="Schrijf een reactie"></textarea><br>
     <button id="sendComment" >Plaats reactie</button>
 
-    <p>Je kan alleen reageren als je dit product gekocht hebt!</p>
+   <?php else: ?> 
+     <p>Je kan alleen reageren als je dit product gekocht hebt!</p>
+    <?php endif; ?> 
 
-</div>
+
 
 <?php include 'includes/footer.php'; ?>
 
 <script>
 
     function loadComments(){
-        fetch("load_comments.php?product_id=<?= $product['id'] ?>")
+        fetch("review_load.php?product_id=<?= $product['id'] ?>")
         .then(function(response) {
             return response.text();
 
@@ -229,7 +233,7 @@ body{
 
                 method: "POST", 
                 headers: {
-                    "Content-Type": "application/x-www_form-urlencoded"
+                    "Content-Type": "application/x-www-form-urlencoded"
                 },
                 body: "product_id=<?= $product['id'] ?>&comment=" + text
 

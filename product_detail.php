@@ -30,7 +30,7 @@ $stmt->execute([$_SESSION["user_id"]]);
 $orders = $stmt->fetchAll();
 
 foreach ($orders as $order){
-    $stmt = $db->prepare("SELECT id FROM order_items WHERE order_id = ? AND product_title = ?");
+    $stmt = $db->prepare("SELECT id FROM order_items WHERE order_id = ? AND product_id = ?");
     $stmt->execute([$order["id"], $product["id"]]);
 
     if ($stmt->fetch()){

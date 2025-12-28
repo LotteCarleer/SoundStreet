@@ -225,11 +225,24 @@ body{
                 return;
             } 
 
-        
+            fetch("review_submit.php", {
 
-        });
+                method: "POST", 
+                headers: {
+                    "Content-Type": "application/x-www_form-urlencoded"
+                },
+                body: "product_id=<?= $product['id'] ?>&comment=" + text
+
+            })
+            .then(function () {
+                document.getElementById("commentText").value = "";
+                loadComments();
+
+            });
+          });
     }
 
+    loadComments();
 
 </script>
     

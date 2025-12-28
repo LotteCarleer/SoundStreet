@@ -184,18 +184,17 @@ body{
 
 </div>
 
-
-
-
-
+</div>
 
 </div>
 
+<h3>Beoordelingen</h3>
 
+<div class="comments">
+    <textarea name="CommentText" class="commentText" placeholder="Schrijf een reactie"></textarea><br>
+    <button id="sendComment" >Plaats reactie</button>
 
-
-
-
+    <p>Je kan alleen reageren als je dit product gekocht hebt!</p>
 
 </div>
 

@@ -202,7 +202,7 @@ if (isset($_POST["delete_product"])){
      <textarea name="description" ><?= htmlspecialchars($p['description']) ?></textarea><br><br>
      <input type="number" name="price" value="<?= $p['price'] ?>" ><br><br>
 
-     <input type="text" name="artist" placeholder="Artiest" <?= $p['artist']?>"><br><br>
+     <input type="text" name="artist" placeholder="Artiest" value="<?= $p['artist']?>"><br><br>
      <input type="text" name="genre" placeholder="Genre" value="<?= $p['genre'] ?>"><br><br>
      <input type="number" name="release_year" placeholder="Release jaar" value="<?= $p['release_year'] ?>"><br><br>
 

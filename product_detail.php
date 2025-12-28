@@ -23,6 +23,22 @@ $productObj = new Product($db);
 
 $product = $productObj->find($_GET["id"]);
 
+$bought = false;
+
+$stmt = $db->prepare("SELECT id FROM orders WHERE user_id = ?");
+$stmt->execute([$_SESSION["user_id"]]);
+$orders = $stmt->fetchAll();
+
+foreach ($orders as $order){
+    $stmt = $db->prepare("SELECT id FROM order_items WHERE order_id = ? AND product_id = ?");
+    $stmt->execute([$order["id"], $product["id"]]);
+
+    if ($stmt->fetch()){
+        $bought = true;
+        break;
+    }
+}
+
 if(!$product){
     echo "Product niet gevonden.";
     exit;

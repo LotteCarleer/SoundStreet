@@ -18,6 +18,7 @@ include_once(__DIR__ . '/classes/Product.php');
 $db = new Database();
 $category = new Category($db);
 $product = new Product($db);
+$latestProducts = $product->latest(4);
 
 $filter = $_GET['category_id'] ?? null;
 $products = $product->all($filter);

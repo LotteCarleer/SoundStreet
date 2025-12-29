@@ -118,6 +118,53 @@ body{
     
 }
 
+#comments{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#comments p{
+    background-color: #f5f5f5;
+    border-left: 4px solid #9A8570;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    max-width: 500px;
+}
+
+.beoordeling{
+    margin-left: 20px;
+}
+
+#commentText{
+    width: 100%;
+    max-width: 500px;
+    min-height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #9A8570;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#sendComment{
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: #D1C2A7;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.p{
+    color: #B00020;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
 @media (max-width: 768px){
     .product-container{
         flex-direction: column;
@@ -188,16 +235,18 @@ body{
 
 </div>
 
-<h3>Beoordelingen</h3>
+
+<h3 class="beoordeling">Beoordelingen</h3>
 
 <div id="comments"></div>
+
 
 <?php if ($bought): ?>
     <textarea name="CommentText" id="commentText" placeholder="Schrijf een reactie"></textarea><br>
     <button id="sendComment" >Plaats reactie</button>
 
    <?php else: ?> 
-     <p>Je kan alleen reageren als je dit product gekocht hebt!</p>
+     <p class="p">Je kan alleen reageren als je dit product gekocht hebt!</p>
     <?php endif; ?> 
 
 

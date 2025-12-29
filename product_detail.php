@@ -140,7 +140,7 @@ body{
 
 #commentText{
     width: 100%;
-    max-width: 500px;
+    max-width: 480px;
     min-height: 100px;
     padding: 10px;
     border-radius: 8px;
@@ -153,11 +153,15 @@ body{
 #sendComment{
     margin-top: 10px;
     margin-left: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
     padding: 10px 20px;
     background-color: #D1C2A7;
     border: none;
     border-radius: 8px;
     font-weight: bold;
+
 }
 
 .p{

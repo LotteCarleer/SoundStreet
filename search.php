@@ -65,9 +65,17 @@ $products = $stmt->fetchAll();
             margin: 8px 0;
         }
 
+        .product img{
+            max-width: 200px;
+            margin: 20px 5px;
+            border-radius: 8px;
+            border: 3px solid #f5f5f5;
+        }
+
         .product a{
             display: inline-block;
             margin-top: 10px;
+            margin-left: 20px;
             padding: 8px 15px;
             background-color: #f5f5f5;
             color: black;

@@ -76,6 +76,14 @@ $categories = $category->all();
         
       }
 
+      .products button{
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        background-color: #D1C2A7;
+        font-weight: bold;
+      }
+
       .categorieën{
         display: flex;
         flex-wrap: wrap;

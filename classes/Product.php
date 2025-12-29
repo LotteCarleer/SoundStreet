@@ -17,6 +17,12 @@ class Product {
         return $stmt->fetchAll();
     }
 
+    public function latest($limit = 4){
+        $stmt = $this->db->prepare("SELECT * FROM products ORDER BY id DESC LIMIT ?");
+        $stmt->execute([$limit]);
+        return $stmt->fetchAll();
+    }
+
     public function add($title, $description, $price, $category_id, $image, $artist, $genre, $release_year){
         $stmt = $this->db->prepare("
          INSERT INTO products (title, description, price, category_id, image, artist, genre, release_year)

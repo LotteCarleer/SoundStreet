@@ -10,6 +10,11 @@ if (!isset($_SESSION["logged_in"])){
 
 }
 
+if (!isset($_SESSION["user_id"])){
+    header("Location: login.php");
+    exit;
+}
+
 include_once(__DIR__ . "/classes/database.php");
 include_once(__DIR__ . "/classes/Product.php");
 

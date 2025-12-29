@@ -10,6 +10,10 @@ if (!isset($_SESSION["logged_in"])){
 include_once(__DIR__ . "/classes/database.php");
 include_once(__DIR__ . "/classes/Product.php");
 
+if (!isset($_GET["search"]) || $_GET["search"] === "" ){
+    header("Location: product.php");
+    exit;
+}
 
 
 

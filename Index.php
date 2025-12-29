@@ -239,18 +239,22 @@ $categories = $category->all();
     
 <h2>Nieuwe producten</h2>
 
+<?php foreach ($latestProducts as $p): ?>
 <div class="new">
-    <h3>Title</h3>
+    <h3><?= htmlspecialchars($p["title"]) ?></h3>
 
-    <img src="#" alt="Product afbeelding">
+    <?php if (!empty($p["image"])): ?>
+    <img src="<?= $p["image"] ?>" alt="Product afbeelding">
+    <?php endif; ?>
 
-    <p> ... SoundCoins</p>
+    <p> <?= $p["price"] ?>SoundCoins</p>
 
-    <a href="product_detail.php">Bekijk product</a>
+    <a href="product_detail.php?id=<?= $p["id"] ?>">Bekijk product</a>
 
 
 
 </div>
+<?php endforeach; ?>
       
  
 

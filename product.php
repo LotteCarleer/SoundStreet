@@ -108,6 +108,11 @@ $categories = $category->all();
   <section>
   <h1>Producten</h1>  
 
+  <form class="search" action="search.php" method="GET">
+    <input type="text" name="search" placeholder="Zoek product">
+    <button type="submit">Zoek</button>
+  </form>
+
   <h2>Categorieën</h2>
   <div class="categorieën">
 

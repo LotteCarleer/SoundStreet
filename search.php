@@ -46,14 +46,16 @@ $products = $stmt->fetchAll();
 <p>Geen producten gevonden</p>
 <?php endif; ?>
 
+<?php foreach ($products as $p): ?>
 <div class="product">
 
-<h3>title</h3>
-<p>artist</p>
-<p> ... SoundCoins</p>
-<a href="">Bekijk details</a>
+<h3><?= htmlspecialchars($p["title"]) ?></h3>
+<p><?= htmlspecialchars($p["artist"]) ?></p>
+<p> <?= $p["price"] ?> SoundCoins</p>
+<a href="product_detail.php?id=<?= $p["id"] ?>">Bekijk details</a>
 
 </div>
+<?php endforeach; ?>
 
 <a href="product.php">Terug naar producten</a>
     

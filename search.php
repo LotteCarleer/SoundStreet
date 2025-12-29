@@ -15,6 +15,16 @@ if (!isset($_GET["search"]) || $_GET["search"] === "" ){
     exit;
 }
 
+$db = new Database();
+$productObj = new Product($db);
+
+$search = "%" . $_GET["search"] . "%";
+
+$stmt = $db->prepare("SELECT * FROM products WHERE title LIKE ? OR artist LIKE ? OR genre LIKE ?");
+$stmt->execute([$search, $search, $search]);
+
+$products = $stmt->fetchAll();
+
 
 
 

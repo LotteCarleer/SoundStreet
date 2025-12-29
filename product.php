@@ -101,6 +101,15 @@ $categories = $category->all();
         
       }
 
+      .search button{
+        background-color: #D1C2A7 ;
+        border: none;
+        border-radius: 8px;
+        padding: 5px 15px;
+        font-weight: bold;
+        margin-left: 5px;
+      }
+
     </style>
     
 </head>

@@ -236,6 +236,20 @@ $categories = $category->all();
 <?php endforeach; ?>
 </div>
     
+<h2>Nieuwe producten</h2>
+
+<div class="new">
+    <h3>Title</h3>
+
+    <img src="#" alt="Product afbeelding">
+
+    <p> ... SoundCoins</p>
+
+    <a href="product_detail.php">Bekijk product</a>
+
+
+
+</div>
       
  
 

@@ -108,6 +108,11 @@ $products = $stmt->fetchAll();
 <h3><?= htmlspecialchars($p["title"]) ?></h3>
 <p><?= htmlspecialchars($p["artist"]) ?></p>
 <p> <?= $p["price"] ?> SoundCoins</p>
+
+<?php if (!empty($p["image"])): ?>
+        <img src="<?= $p["image"] ?>" alt="Product image">
+       <?php endif; ?> 
+
 <a href="product_detail.php?id=<?= $p["id"] ?>">Bekijk details</a>
 
 </div>

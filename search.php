@@ -1,3 +1,22 @@
+<?php 
+
+session_start();
+
+if (!isset($_SESSION["logged_in"])){
+    header("location: login.php");
+    exit;
+}
+
+include_once(__DIR__ . "/classes/database.php");
+include_once(__DIR__ . "/classes/Product.php");
+
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>

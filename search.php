@@ -40,9 +40,11 @@ $products = $stmt->fetchAll();
 </head>
 <body>
 
-<h1>Zoekresultaten voor ...</h1>
+<h1>Zoekresultaten voor "<?= htmlspecialchars($_GET["search"]) ?>"</h1>
 
+<?php if (empty($products)): ?>
 <p>Geen producten gevonden</p>
+<?php endif; ?>
 
 <div class="product">
 

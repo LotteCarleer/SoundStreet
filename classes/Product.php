@@ -17,9 +17,8 @@ class Product {
         return $stmt->fetchAll();
     }
 
-    public function latest($limit = 4){
-        $stmt = $this->db->prepare("SELECT * FROM products ORDER BY id DESC LIMIT ?");
-        $stmt->execute([$limit]);
+    public function latest(){
+        $stmt = $this->db->query("SELECT * FROM products ORDER BY id DESC LIMIT 4");
         return $stmt->fetchAll();
     }
 

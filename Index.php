@@ -63,7 +63,9 @@ $categories = $category->all();
             padding-bottom: 30px;
             margin-left: 50px;
             margin-right: 50px;
+            margin-top: 50px;
             border-radius: 20px;
+
             
 
         }
@@ -97,7 +99,7 @@ $categories = $category->all();
         margin-left: 40px;
        } 
        
-       .cat-heading{
+       .heading{
 
         margin-left: 20px;
         margin-top: 40px;
@@ -149,6 +151,17 @@ $categories = $category->all();
 
       }
 
+      .new-products{
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+        margin: 30px 50px;
+        margin-bottom: 70px;
+        
+        
+
+      }
+
       .new{
         
         background-color: #FAFAF9;
@@ -186,6 +199,7 @@ $categories = $category->all();
         font-weight: bold;
       }
 
+     
     
 
        @media (max-width: 768px) {
@@ -202,7 +216,20 @@ $categories = $category->all();
             margin-left: 20px;
             margin-right: 30px;
         }
+
+        .new-products{
+        flex-wrap: wrap;
+        gap: 20px;
        }
+
+       .new{
+        width: 50%;
+       }
+
+       }
+
+       
+       
 
        
         
@@ -231,7 +258,7 @@ $categories = $category->all();
 
     
 
-    <h2 class="cat-heading">Categorieën</h2>
+    <h2 class="heading">Categorieën</h2>
     <div class="categorieën">
 
        <?php  foreach($categories as $cat): ?> 
@@ -270,7 +297,9 @@ $categories = $category->all();
 <?php endforeach; ?>
 </div>
     
-<h2>Nieuwe producten</h2>
+<h2 class="heading">Nieuwe producten</h2>
+
+<div class="new-products">
 
 <?php foreach ($latestProducts as $p): ?>
 <div class="new">
@@ -288,7 +317,7 @@ $categories = $category->all();
 
 </div>
 <?php endforeach; ?>
-      
+</div>  
  
 
     

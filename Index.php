@@ -148,7 +148,43 @@ $categories = $category->all();
         
 
       }
+
+      .new{
         
+        background-color: #FAFAF9;
+        border: 3px solid #9A8570;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .new img{
+        width: 200px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 15px 0;
+      } 
+
+      .new h3{
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+        
+      .new p {
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .new a{
+        display: inline-block;
+        padding: 8px 15px;
+        background-color: #D1C2A7;
+        color: black;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+      }
 
     
 
@@ -160,10 +196,7 @@ $categories = $category->all();
 
         }
         
-        .image{
-            padding-left: 30px;
-            
-        }
+        
         
         .text{
             margin-left: 20px;

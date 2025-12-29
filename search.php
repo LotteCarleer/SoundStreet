@@ -37,6 +37,62 @@ $products = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoeken</title>
+
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        h1{
+            margin: 40px;
+        }
+
+        .product{
+            background-color: #B2AB9F;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 40px;
+            max-width: 400px;
+        }
+
+        .product h3{
+            margin-top: 5px;
+        }
+
+        .product p {
+            margin: 8px 0;
+        }
+
+        .product a{
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #f5f5f5;
+            color: black;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        a{
+            margin: 40px;
+            display: inline-block;
+            font-weight: bold;
+            color: #9A8570;
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+
+
+
+
+    </style>
 </head>
 <body>
 
